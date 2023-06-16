@@ -1,10 +1,14 @@
-# NeurodiversityMain
+# Neurodiversity In Buisness Websitev
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+## Docker with Build of Angular Application Directly
+Run the following to create the docker image
+```npm run-script dockerBuild```
+And then run the image with docker.
+```npm run-script dockerRun```
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm run-script start-dev` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -20,7 +24,14 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Run in another shell
+```webdriver-manager start```
+
+Then run `npm run-script e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+You will need to have protractor installed globlally for this to work ```npm -g install protractor```
+
+You will also need the image running on port 8080.
 
 ## Further help
 
