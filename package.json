@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start-dev": "ng serve",
-    "start": "server.js",
-    "build": "ng build --configuration production",
+    "start": "node server.js",
+    "buildDev": "ng build --watch --configuration development",
+    "build": "ng build --deploy-url 'http://neurodiversity.org/' --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch false",
     "converage": "ng test --no-watch --code-coverage",
@@ -23,6 +24,7 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "express.js": "^1.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
