@@ -3,10 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start-dev": "ng serve",
+    "start": "server.js",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test --watch false",
+    "converage": "ng test --no-watch --code-coverage",
+    "e2e": "webdriver-manager start && protractor ./src/test/protractor-config.js",
+    "dockerBuild": "docker build -f .\\DOCKERFILE -t neurodiversity-main .",
+    "dockerRun": "docker run  --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --env=NODE_VERSION=14.21.3 --env=YARN_VERSION=1.22.19 --workdir=/ -p 8080:8080 --runtime=runc -d angular-python-pi:latest"
   },
   "private": true,
   "dependencies": {
