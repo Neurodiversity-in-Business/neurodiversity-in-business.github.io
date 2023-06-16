@@ -6,7 +6,7 @@
     "start-dev": "ng serve",
     "start": "node server.js",
     "buildDev": "ng build --watch --configuration development",
-    "build": "ng build --deploy-url 'http://neurodiversity.org/' --configuration production",
+    "build": "ng build --deploy-url '/' --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch false",
     "converage": "ng test --no-watch --code-coverage",
