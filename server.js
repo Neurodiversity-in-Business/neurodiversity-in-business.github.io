@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 // Create link to Angular build directory
 // The `ng build` command will save the result
 // under the `dist` folder.
-var distDir = __dirname + "dist/angular-python-pi/";
+var distDir = __dirname + "/public/neurodiversity-main/";
 app.use(express.static(distDir));
 
 function getRoot(request, response) {
