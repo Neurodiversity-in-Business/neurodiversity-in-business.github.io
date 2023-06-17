@@ -1,9 +1,9 @@
 FROM node:14
 WORKDIR /
-COPY src /opt/neurodiversity-main/src
-COPY *.json /opt/neurodiversity-main/
-COPY *.js /opt/neurodiversity-main/
-CMD npm install && \
-npm run-script build &&  \
-node /opt/neurodiversity-main/src/main/server.js
+COPY node_modules /opt/neurodiversity-main/node_modules
+COPY public /opt/neurodiversity-main/public
+COPY server.js /opt/neurodiversity-main/server.js
+COPY package.json /opt/neurodiversity-main/package.json
+CMD npm install  && \
+ node /opt/neurodiversity-main/server.js
 EXPOSE 8080
