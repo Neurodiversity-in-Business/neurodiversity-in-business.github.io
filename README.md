@@ -1,7 +1,9 @@
 # Neurodiversity In Buisness Websitev
 
 ## Docker with Build of Angular Application Directly
-Run the following to create the docker image
+First run the npm build
+```npm run-script build```
+Then Run the following to create the docker image
 ```npm run-script dockerBuild```
 And then run the image with docker.
 ```npm run-script dockerRun```
