@@ -14,6 +14,7 @@ import { TitleComponent } from './title/title.component';
     BrowserModule,
     AppRoutingModule
   ],
+  exports:[TitleComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
