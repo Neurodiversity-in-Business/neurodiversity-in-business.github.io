@@ -14,8 +14,11 @@ jobs:
 
     steps:
     - uses: actions/setup-node@v3
-    - name: Build the Docker image
-      run: npm ci
+    - name: Install the packages
+      run: npm install
+    - uses: actions/setup-node@v3
+    - name: Run Angular Production Build
+      run: npm run-script build
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
