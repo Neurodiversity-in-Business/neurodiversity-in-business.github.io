@@ -15,6 +15,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Install Angular CLI
+      run: npm install @angular/cli
+    - uses: actions/checkout@v3
     - name: Install the packages
       run: npm install
     - uses: actions/checkout@v3
