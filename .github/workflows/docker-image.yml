@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/setup-node@v3
     - name: Install the packages
-      run: npm install
+      run: cd ../ && npm install
     - uses: actions/setup-node@v3
     - name: Run Angular Production Build
       run: npm run-script build
