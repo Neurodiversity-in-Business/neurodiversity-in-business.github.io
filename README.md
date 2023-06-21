@@ -1,4 +1,6 @@
-# Neurodiversity In Buisness Website [![Node.js CI](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/node.js.yml/badge.svg)](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/node.js.yml) [![Docker Image CI](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/docker-image.yml/badge.svg)](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/docker-image.yml)
+# Neurodiversity In Buisness Website
+
+[![Node.js CI](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/node.js.yml/badge.svg)](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/node.js.yml) [![Docker Image CI](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/docker-image.yml/badge.svg)](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/docker-image.yml)
 
 ## Welcome
 This is the public work repository for the Neurodiversity in Buisness Website.
