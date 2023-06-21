@@ -21,7 +21,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install @angular/angular-cli:latest
+      - run: npm install @angular/angular-cli
       - run: npm ci
       - run: npm run-script build
       - run: npm test
