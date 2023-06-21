@@ -15,11 +15,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Install Angular CLI
+    - name: Package Application
       run: |
         npm install -g @angular/cli
         npm install
         npm run-script build
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+        docker build . --file Dockerfile --tag my-image-name:$(date +%s)
