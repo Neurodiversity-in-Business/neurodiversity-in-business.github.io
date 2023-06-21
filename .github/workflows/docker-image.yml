@@ -1,21 +1,26 @@
-name: Docker Image CI
+name: Node.js CI
 
 on:
   push:
-    branches: [ "development" ]
+    branches: [ development ]
   pull_request:
-    branches: [ "development" ]
+    branches: [ development ]
 
 jobs:
-
   build:
 
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x, 20.x]
+
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Angular Project
-      run: npm run-script build
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run-script build
+      - run: npm test
