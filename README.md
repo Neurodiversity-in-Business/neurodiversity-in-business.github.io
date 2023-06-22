@@ -1,21 +1,6 @@
-# Neurodiversity In Buisness Website Twitter
-
-[![Twitter][1.1]][1]
-[![LinkedIn][2.1]][2]
-[![Youtube][3.1]][3]
-[![Instagram][4.1]][4]
-
+# Neurodiversity In Buisness Website Twitter [![Twitter][1.1]][1]
 [1.1]: http://i.imgur.com/tXSoThF.png (twitter icon with padding)
-[2.1]: http://i.imgur.com/P3YfQoD.png (facebook icon with padding)
-[3.1]: http://i.imgur.com/yCsTjba.png (google plus icon with padding)
-[4.1]: http://i.imgur.com/YckIOms.png (tumblr icon with padding)
-[5.1]: http://i.imgur.com/1AGmwO3.png (dribbble icon with padding)
-[6.1]: http://i.imgur.com/0o48UoR.png (github icon with padding)
-
 [1]: https://twitter.com/NDinBusiness
-[2]: https://www.linkedin.com/company/neurodiversity-in-business/
-[3]: https://www.youtube.com/channel/UCk0YOpwyHt8IoJMNmOUHy1g
-[4]: https://www.instagram.com/ndinbusiness/
 
 
 [![Node.js CI](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/node.js.yml/badge.svg)](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/node.js.yml) [![Docker Image CI](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/docker-image.yml/badge.svg)](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/docker-image.yml)
