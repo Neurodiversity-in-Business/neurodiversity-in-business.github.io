@@ -1,6 +1,7 @@
 {
   "name": "neurodiversity-main",
   "version": "0.0.0",
+  "author":"Usi Diamond",
   "scripts": {
     "ng": "ng",
     "start-dev": "ng serve",
