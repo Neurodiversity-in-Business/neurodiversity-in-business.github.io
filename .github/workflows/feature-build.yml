@@ -34,7 +34,7 @@ jobs:
       with:
         type: 'zip'
         filename: 'release.zip'
-        exclusions: '*.git* .vscode* .editorconfig'
+        directory: 'public'
     - name: Create Release
       id: create_release
       uses: ncipollo/release-action@v1
