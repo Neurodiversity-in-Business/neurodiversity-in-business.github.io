@@ -5,14 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-    - uses: actions/checkout@master
+      uses: actions/checkout@master
     - name: Archive Release
-    - uses: thedoctor0/zip-release@0.7.1 
+      uses: thedoctor0/zip-release@0.7.1 
       with:
         type: 'zip'
         filename: 'release.zip'
     - name: Upload Release
-    - uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@v1
       with: 
         exclusions: '*.git* .vscode* .editorconfig'
         artifacts: "release.zip"
