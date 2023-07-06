@@ -18,14 +18,6 @@ jobs:
         type: 'zip'
         filename: 'release.zip'
         exclusions: '*.git* .vscode* .editorconfig'
-    - name: Set new tag
-      id: newtag
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        tag=$(gh release view --json tagName --jq '.tagName')
-        IFS=. read -r major minor patch <<< "$tag"
-        echo "newtag=$major.$minor.$((++patch))" >> "$GITHUB_OUTPUT"
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
