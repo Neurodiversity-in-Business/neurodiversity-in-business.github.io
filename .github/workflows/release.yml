@@ -39,3 +39,4 @@ jobs:
       with:
         tag: "nightly-tag-${{ steps.date.outputs.date }}"
         artifacts: "release.zip"
+        prerelease: true
