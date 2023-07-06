@@ -1,9 +1,9 @@
 name: Create Archive
 on:
   push:
-    branches: [ "development", "master" ]
+    branches: [ "staging", "production" ]
   pull_request:
-    branches: [ "development" , "master"]
+    branches: [  "staging" , "production"]
 permissions:
     contents: write  
 jobs:
