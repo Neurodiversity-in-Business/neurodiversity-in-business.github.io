@@ -4,10 +4,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout
     - uses: actions/checkout@master
     - name: Archive Release
-      uses: thedoctor0/zip-release@0.7.1
+    - uses: thedoctor0/zip-release@0.7.1 
+    - name: Upload Release
+    - uses: ncipollo/release-action@v1
       with:
         type: 'zip'
         filename: 'release.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
+        artifacts: "release.zip"
