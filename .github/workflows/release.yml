@@ -1,7 +1,7 @@
 name: Create Archive
 on:
   push:
-    branches: [ "staging", "production" ]
+    branches: [ "production" ]
   pull_request:
     branches: [  "staging" , "production"]
 permissions:
