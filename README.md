@@ -1,4 +1,4 @@
-# Neurodiversity In Buisness Website  [![Twitter][1.1]][1]
+# Neurodiversity In Business Website  [![Twitter][1.1]][1]
 [1.1]: http://i.imgur.com/tXSoThF.png (twitter icon with padding)
 [1]: https://twitter.com/NDinBusiness
 
