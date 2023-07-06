@@ -34,7 +34,8 @@ jobs:
       with:
         type: 'zip'
         filename: 'release.zip'
-        directory: 'public'
+        directory: '.'
+        path: "public"
     - name: Create Release
       id: create_release
       uses: ncipollo/release-action@v1
