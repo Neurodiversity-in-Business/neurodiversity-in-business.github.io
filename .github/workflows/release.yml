@@ -8,10 +8,11 @@ jobs:
     - uses: actions/checkout@master
     - name: Archive Release
     - uses: thedoctor0/zip-release@0.7.1 
-    - name: Upload Release
-    - uses: ncipollo/release-action@v1
       with:
         type: 'zip'
         filename: 'release.zip'
-        exclusions: '*.git* /*node_modules/* .editorconfig'
+    - name: Upload Release
+    - uses: ncipollo/release-action@v1
+      with: 
+        exclusions: '*.git* .vscode* .editorconfig'
         artifacts: "release.zip"
