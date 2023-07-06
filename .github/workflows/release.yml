@@ -22,5 +22,5 @@ jobs:
       uses: ncipollo/release-action@v1
       with: 
         artifacts: "release.zip"
-        tag: true
+        updateOnlyUnreleased: false
         commit: true
