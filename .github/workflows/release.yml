@@ -1,9 +1,9 @@
 name: Create Archive
 on:
   push:
-    branches: [ "development", "master" ]
+    branches: [ "staging", "production" ]
   pull_request:
-    branches: [ "development" , "master"]
+    branches: [  "staging" , "production"]
 permissions:
     contents: write  
 jobs:
@@ -12,7 +12,7 @@ jobs:
     steps:
     - name: Get current date
       id: date
-      run: echo "::set-output name=date::$(date +'%Y-%m-%d-%S')"
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M-%S')"
     - name: Test with environment variables
       run: echo $TAG_NAME - $RELEASE_NAME
       env:
