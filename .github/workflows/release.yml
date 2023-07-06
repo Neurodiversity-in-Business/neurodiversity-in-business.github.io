@@ -18,8 +18,11 @@ jobs:
         type: 'zip'
         filename: 'release.zip'
         exclusions: '*.git* .vscode* .editorconfig'
-    - name: Upload Release
+    - name: Create Github Release
       uses: ncipollo/release-action@v1
-      with: 
+      with:
         artifacts: "release.zip"
-        commit: true
+        tag: ${{ steps.newtag.outputs.newtag }}
+        replacesArtifacts: false
+        token: ${{ secrets.GITHUB_TOKEN }}
+        allowUpdates: true
