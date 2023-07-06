@@ -1,7 +1,7 @@
 name: Create Archive
 on:
   push:
-    branches: [ "staging", "production" ]
+    branches: [ "production" ]
   pull_request:
     branches: [  "staging" , "production"]
 permissions:
@@ -39,3 +39,4 @@ jobs:
       with:
         tag: "nightly-tag-${{ steps.date.outputs.date }}"
         artifacts: "release.zip"
+        prerelease: true
