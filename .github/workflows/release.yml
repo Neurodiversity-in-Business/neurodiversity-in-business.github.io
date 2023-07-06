@@ -43,3 +43,6 @@ jobs:
         release_name:  nightly-release-${{ steps.date.outputs.date }}
         draft: false
         prerelease: true
+    - uses: ncipollo/release-action@v1
+      with:
+        artifacts: "release.zip"
