@@ -1,5 +1,9 @@
 name: Create Archive
-on: [push]
+on:
+  push:
+    branches: [ "development", "master" ]
+  pull_request:
+    branches: [ "development" , "master"]
 jobs:
   build:
     runs-on: ubuntu-latest
