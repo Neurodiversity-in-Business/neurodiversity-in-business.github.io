@@ -1,7 +1,7 @@
 name: Create Archive
 on:
   push:
-    branches: [ "staging" , "production"]
+    branches: [ "development" ]
 permissions:
     contents: write  
 jobs:
@@ -18,8 +18,8 @@ jobs:
     - name: Test with environment variables
       run: echo $TAG_NAME - $RELEASE_NAME
       env:
-        TAG_NAME: ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}
-        RELEASE_NAME: ${{ steps.extract_branch.outputs.branch }} Build ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}
+        TAG_NAME: feature-${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}
+        RELEASE_NAME: Feature Build ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}
     - name: Checkout
       uses: actions/checkout@master
     - name: Use Node.js ${{ matrix.node-version }}
