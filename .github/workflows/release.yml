@@ -26,12 +26,13 @@ jobs:
         tag=$(gh release view --json tagName --jq '.tagName')
         IFS=. read -r major minor patch <<< "$tag"
         echo "newtag=$major.$minor.$((++patch))" >> "$GITHUB_OUTPUT"
-
-    - name: Create Github Release
-      uses: ncipollo/release-action@v1
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        artifacts: "release.zip"
-        tag: ${{ steps.newtag.outputs.newtag }}
-        replacesArtifacts: false
-        token: ${{ secrets.GITHUB_TOKEN }}
-        allowUpdates: true
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
