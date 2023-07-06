@@ -32,8 +32,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ steps.date.outputs.TAG_NAME }}
-        release_name: ${{ steps.date.outputs.RELEASE_NAME }}
+        tag_name: ${{ TAG_NAME }}
+        release_name: ${{ RELEASE_NAME }}
         draft: false
         prerelease: true
         commitish: true
