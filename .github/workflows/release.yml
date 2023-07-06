@@ -11,8 +11,8 @@ jobs:
       with:
         type: 'zip'
         filename: 'release.zip'
+        exclusions: '*.git* .vscode* .editorconfig'
     - name: Upload Release
       uses: ncipollo/release-action@v1
       with: 
-        exclusions: '*.git* .vscode* .editorconfig'
         artifacts: "release.zip"
