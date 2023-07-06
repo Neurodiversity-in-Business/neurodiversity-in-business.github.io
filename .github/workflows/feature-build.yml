@@ -39,6 +39,6 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-        tag: "nightly-tag-${{ steps.date.outputs.date }}"
+        tag: "feature-${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}"
         artifacts: "release.zip"
         prerelease: true
