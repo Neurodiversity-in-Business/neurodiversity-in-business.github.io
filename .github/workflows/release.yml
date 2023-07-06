@@ -45,4 +45,5 @@ jobs:
         prerelease: true
     - uses: ncipollo/release-action@v1
       with:
+        tag: "nightly-tag-${{ steps.date.outputs.date }}"
         artifacts: "release.zip"
