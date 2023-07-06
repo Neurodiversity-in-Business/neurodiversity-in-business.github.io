@@ -20,4 +20,4 @@ jobs:
         npm install -g @angular/cli
         npm install
         npm run-script build
-        docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+        docker build . --file Dockerfile --tag neurodiversity-main:$(date +%s)
