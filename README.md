@@ -6,7 +6,7 @@
 
 
 ## Welcome
-This is the public work repository for the Neurodiversity in Buisness Website.
+This is the public work repository for the Neurodiversity in Business Website.
 
 ## About us
 
