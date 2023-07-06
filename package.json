@@ -2,8 +2,8 @@
   "name": "@Neurodiversity-in-Business/neurodiversity-main",
   "version": "0.5.1",
   "author":"Usi Diamond",
-  "homepage":"https://neurodiversity.org"
-  "description":"Neurodiversity in Buisness (NiB) is a business-led forum functioning as an industry group for organisations to share industry good practice on ND recruitment, retention and empowerment."
+  "homepage":"https://neurodiversity.org",
+  "description":"Neurodiversity in Buisness (NiB) is a business-led forum functioning as an industry group for organisations to share industry good practice on ND recruitment, retention and empowerment.",
   "scripts": {
     "ng": "ng",
     "start-dev": "ng serve",
