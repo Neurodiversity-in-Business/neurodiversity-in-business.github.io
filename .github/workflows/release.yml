@@ -4,6 +4,8 @@ on:
     branches: [ "development", "master" ]
   pull_request:
     branches: [ "development" , "master"]
+permissions:
+    contents: write  
 jobs:
   build:
     runs-on: ubuntu-latest
