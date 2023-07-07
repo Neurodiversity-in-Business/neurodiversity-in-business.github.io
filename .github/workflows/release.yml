@@ -1,7 +1,7 @@
 name: Create Archive
 on:
   push:
-    branches: [ "staging" , "production"]
+    branches: [ "staging"]
 permissions:
     contents: write  
 jobs:
