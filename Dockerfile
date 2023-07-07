@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:20
 COPY node_modules /opt/neurodiversity-main/node_modules
 COPY public /opt/neurodiversity-main/public
 COPY server.js /opt/neurodiversity-main/server.js
