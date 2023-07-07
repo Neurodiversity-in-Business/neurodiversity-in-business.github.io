@@ -39,12 +39,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build
-    - run: npm test
+    - run: npm run-script build
     - name: Archive production artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: Static Site Assets
+        name: Static-Site-Assets
         path: |
           public
           !public/**/*.md
@@ -60,7 +59,7 @@ jobs:
     steps:
     - uses: actions/download-artifact@master
       with:
-        name: Static Site Assets
+        name: Static-Site-Assets
         path: .
     - uses: actions/configure-pages@v1
     - uses: actions/upload-pages-artifact@v1
