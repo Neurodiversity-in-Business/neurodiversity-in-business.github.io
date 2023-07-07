@@ -18,8 +18,8 @@ jobs:
     - name: Test with environment variables
       run: echo $TAG_NAME - $RELEASE_NAME
       env:
-        TAG_NAME: ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${{ GITHUB_SHA }}
-        RELEASE_NAME: Build ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${{ GITHUB_SHA }}
+        TAG_NAME: ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${{ env.GITHUB_SHA }}
+        RELEASE_NAME: Build ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${{ env.GITHUB_SHA }}
     - name: Checkout
       uses: actions/checkout@master
     - name: Use Node.js ${{ matrix.node-version }}
@@ -40,6 +40,6 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-        tag: " ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${{ GITHUB_SHA }}"
+        tag: " ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${{ env.GITHUB_SHA }}"
         artifacts: "release.zip"
         prerelease: true
