@@ -14,11 +14,14 @@ jobs:
       id: extract_branch
     - name: Get current date
       id: date
-      run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M-%S')"
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+    - name: Get Hash
+      id: hash
+      run: echo "git_hash=$(git rev-parse --short "$GITHUB_SHA")" >> $GITHUB_HASH
     - name: Test with environment variables
       run: echo $TAG_NAME - $RELEASE_NAME
       env:
-        TAG_NAME: feature-${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}
+        TAG_NAME: ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${{ steps.hash.outputs.git_hash }}
         RELEASE_NAME: Feature Build ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}
     - name: Checkout
       uses: actions/checkout@master
@@ -40,6 +43,6 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-        tag: "feature-${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}"
+        tag: "${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${{ steps.hash.outputs.git_hash }}"
         artifacts: "release.zip"
         prerelease: true
