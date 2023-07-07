@@ -40,6 +40,6 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-        tag: " ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${{ LAST_COMMIT_SHA }}"
+        tag: " ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}"
         artifacts: "release.zip"
         prerelease: true
