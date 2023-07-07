@@ -9,7 +9,6 @@ export class AppComponent implements OnInit {
   title = 'neurodiversity-main';
 
   ngOnInit(){
-    window.location.href = "https://neurodiversityinbusiness.org/";
 
   }
 }
