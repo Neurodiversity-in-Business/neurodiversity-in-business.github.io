@@ -18,8 +18,8 @@ jobs:
     - name: Test with environment variables
       run: echo $TAG_NAME - $RELEASE_NAME
       env:
-        TAG_NAME: feature-${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}
-        RELEASE_NAME: Feature Build ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}
+        TAG_NAME: ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}
+        RELEASE_NAME: Build ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}
     - name: Checkout
       uses: actions/checkout@master
     - name: Use Node.js ${{ matrix.node-version }}
@@ -40,6 +40,6 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-        tag: "feature-${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}"
+        tag: " ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}"
         artifacts: "release.zip"
         prerelease: true
