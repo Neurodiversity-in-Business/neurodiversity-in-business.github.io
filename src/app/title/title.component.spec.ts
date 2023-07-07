@@ -9,10 +9,9 @@ describe('TitleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TitleComponent ],
-      schemas:[CUSTOM_ELEMENTS_SCHEMA]
-    })
-    .compileComponents();
+      declarations: [TitleComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TitleComponent);
     component = fixture.componentInstance;

@@ -1,18 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import {TitleComponent} from './title/title.component'
+import { TitleComponent } from './title/title.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent,
-        TitleComponent
-      ],
+      imports: [RouterTestingModule],
+      declarations: [AppComponent, TitleComponent],
     }).compileComponents();
   });
 
@@ -32,6 +27,8 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('#contentParagraph')?.textContent).toContain('Coming Soon! In the meantime, visit us at https://neurodiversityinbusiness.org/');
+    expect(compiled.querySelector('#contentParagraph')?.textContent).toContain(
+      'Coming Soon! In the meantime, visit us at https://neurodiversityinbusiness.org/'
+    );
   });
 });

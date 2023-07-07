@@ -23,7 +23,6 @@ concurrency:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -32,19 +31,19 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run-script build
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: Static-Site-Assets
-        path: public/neurodiversity-main/
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm ci
+      - run: npm run-script build
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Static-Site-Assets
+          path: public/neurodiversity-main/
 
   # Single deploy job since we're just deploying
   deploy:
@@ -54,13 +53,13 @@ jobs:
       name: github-pages
       url: ${{steps.deployment.outputs.page_url}}
     steps:
-    - uses: actions/download-artifact@master
-      with:
-        name: Static-Site-Assets
-        path: .
-    - uses: actions/configure-pages@v1
-    - uses: actions/upload-pages-artifact@v1
-      with:
-        path: .
-    - id: deployment
-      uses: actions/deploy-pages@main
+      - uses: actions/download-artifact@master
+        with:
+          name: Static-Site-Assets
+          path: .
+      - uses: actions/configure-pages@v1
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@main
