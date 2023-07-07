@@ -15,11 +15,16 @@ jobs:
     - name: Get current date
       id: date
       run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+    - name: Setup Environment (Push)  
+      if: ${{ github.event_name == 'push' }}  
+      shell: bash  
+      run: |  
+        echo "LAST_COMMIT_SHA=${GITHUB_SHA}" >> ${GITHUB_ENV}
     - name: Test with environment variables
       run: echo $TAG_NAME - $RELEASE_NAME
       env:
-        TAG_NAME: ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${{ env.GITHUB_SHA }}
-        RELEASE_NAME: Build ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${{ env.GITHUB_SHA }}
+        TAG_NAME: ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${LAST_COMMIT_SHA:0:7}
+        RELEASE_NAME: Build ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${LAST_COMMIT_SHA:0:7}
     - name: Checkout
       uses: actions/checkout@master
     - name: Use Node.js ${{ matrix.node-version }}
@@ -40,6 +45,6 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-        tag: " ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${{ env.GITHUB_SHA }}"
+        tag: " ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}-${LAST_COMMIT_SHA:0:7}"
         artifacts: "release.zip"
         prerelease: true
