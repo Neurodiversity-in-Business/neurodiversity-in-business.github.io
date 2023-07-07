@@ -29,7 +29,7 @@ Run in another shell
 
 Then run `npm run-script e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-You will need to have protractor installed globlally for this to work ```npm -g install protractor```
+You will need to have protractor and webdriver manager installed globlally for this to work ```npm -g install protractor webdriver-manager```
 
 You will also need the image running on port 8080.
 
