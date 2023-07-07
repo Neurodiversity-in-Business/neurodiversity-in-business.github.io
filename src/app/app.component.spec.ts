@@ -32,6 +32,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('#contentParagraph')?.textContent).toContain('neurodiversity-main app is running!');
+    expect(compiled.querySelector('#contentParagraph')?.textContent).toContain('Coming Soon! In the meantime, visit us at https://neurodiversityinbusiness.org/');
   });
 });
