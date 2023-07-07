@@ -44,9 +44,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: Static-Site-Assets
-        path: |
-          public
-          !public/**/*.md
+        path: public/neurodiversity-main/
 
   # Single deploy job since we're just deploying
   deploy:
@@ -55,7 +53,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{steps.deployment.outputs.page_url}}
-      
     steps:
     - uses: actions/download-artifact@master
       with:
