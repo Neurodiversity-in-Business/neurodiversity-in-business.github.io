@@ -1,7 +1,7 @@
 name: Create Archive
 on:
   push:
-    branches: [ "development", "staging", "production", "feature/*" ]
+    branches: [ "feature/*" ]
 permissions:
     contents: write  
 jobs:
@@ -28,18 +28,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build
-    - name: Archive Release
-      uses: thedoctor0/zip-release@0.7.1 
+    - run: npm run-script coverage
+    - uses: actions/upload-artifact@v3
       with:
-        type: 'zip'
-        filename: 'release.zip'
-        directory: '.'
-        path: "public"
-    - name: Create Release
-      id: create_release
-      uses: ncipollo/release-action@v1
-      with:
-        tag: " ${{ steps.extract_branch.outputs.branch }}-${{ steps.date.outputs.date }}"
-        artifacts: "release.zip"
-        prerelease: true
+        name: Coverage Report
+        path: coverage/neurodiversity-main/
