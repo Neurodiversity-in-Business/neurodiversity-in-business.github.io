@@ -1,4 +1,4 @@
 Feature: Landing Page
     This feature lets a user see the landing page.
 Scenario: Basic increment scenario
-    Given I am on the home page
+     Given I go to "http://localhost:8080/"
