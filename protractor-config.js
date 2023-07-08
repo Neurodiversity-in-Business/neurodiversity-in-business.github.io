@@ -11,7 +11,7 @@ exports.config = {
   cucumberOpts: {
     // require step definitions
     require: [
-      "./src/integration-testing/steps/*.steps.ts", // accepts a glob
+      "./src/integration-testing/steps/*.steps.js", // accepts a glob
     ],
   },
   onPrepare() {
