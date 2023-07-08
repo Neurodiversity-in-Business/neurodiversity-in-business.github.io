@@ -5,13 +5,12 @@ name: Run Build and Unit Tests
 
 on:
   push:
-    branches: [ "development" ]
+    branches: ["development"]
   pull_request:
-    branches: [ "development" ]
+    branches: ["development"]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -20,20 +19,19 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build
-    - run: npm test
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: Static Site Assets
-        path: |
-          public
-          !public/**/*.md
-
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Static Site Assets
+          path: |
+            public
+            !public/**/*.md
