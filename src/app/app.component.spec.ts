@@ -17,10 +17,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'neurodiversity-main'`, () => {
+  it(`should have as title 'Neurodiversity in Business'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('neurodiversity-main');
+    expect(app.title).toEqual('Neurodiversity in Business');
   });
 
 
