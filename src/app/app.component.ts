@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'neurodiversity-main';
+  navActiveId = 1;
 
   ngOnInit() {}
 }

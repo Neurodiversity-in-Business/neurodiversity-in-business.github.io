@@ -1,6 +1,40 @@
-<p id="contentParagraph">
-  Coming Soon! In the meantime, visit us at
-  https://neurodiversityinbusiness.org/
-</p>
+<ul ngbNav #nav="ngbNav" [(activeId)]="navActiveId" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <button ngbNavLink>Home</button>
+    <ng-template ngbNavContent>
+      <app-home></app-home>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <button ngbNavLink>About Us</button>
+    <ng-template ngbNavContent> <app-about></app-about></ng-template>
+  </li>
+  <li [ngbNavItem]="3">
+    <button ngbNavLink>Become A Member</button>
+    <ng-template ngbNavContent>
+      <app-member-start></app-member-start
+    ></ng-template>
+  </li>
+  <li [ngbNavItem]="4">
+    <button ngbNavLink>Research</button>
+    <ng-template ngbNavContent> <app-research></app-research></ng-template>
+  </li>
+  <li [ngbNavItem]="5">
+    <button ngbNavLink>Volunteer With Us</button>
+    <ng-template ngbNavContent>
+      <app-volunteer-start></app-volunteer-start
+    ></ng-template>
+  </li>
+  <li [ngbNavItem]="6">
+    <button ngbNavLink>ND Resource Hub</button>
+    <ng-template ngbNavContent> <app-hub></app-hub></ng-template>
+  </li>
+  <li [ngbNavItem]="7">
+    <button ngbNavLink>Contact Us</button>
+    <ng-template ngbNavContent> <app-contact-us></app-contact-us></ng-template>
+  </li>
+</ul>
 
-<app-title></app-title>
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+<app-footer> </app-footer>
