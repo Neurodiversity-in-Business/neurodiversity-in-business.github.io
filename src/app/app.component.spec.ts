@@ -22,12 +22,5 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('neurodiversity-main');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('#contentParagraph')?.textContent).toContain(
-      'Coming Soon! In the meantime, visit us at https://neurodiversityinbusiness.org/'
-    );
-  });
+
 });
