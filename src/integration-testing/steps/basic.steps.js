@@ -22,3 +22,7 @@ Given("I go to {string}", function (string) {
   
   expect(browser.getCurrentUrl()).to.eventually.equal("http://localhost:8080");
 });
+Then('click on the Home Button', function () {
+  // Write code here that turns the phrase above into concrete actions
+  expect("").to.be.equal('')
+});

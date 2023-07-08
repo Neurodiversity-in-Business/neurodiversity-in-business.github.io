@@ -1,4 +1,3 @@
-const { protractor } = require("protractor");
 
 
 var HomePage = function () {
