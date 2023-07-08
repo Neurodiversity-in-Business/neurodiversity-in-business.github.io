@@ -1,9 +1,24 @@
 // Import the cucumber operators we need
-const { Before, Given,When, Then, After } = require('@cucumber/cucumber');
-const assert = require('assert');
+const { Before, Given, When, Then, After } = require("@cucumber/cucumber");
+const assert = require("assert");
+const { HomePage } = require("../pages/home.po");
 
+var chai = require("chai");
+var expect = chai.expect;
 
-  Given('I go to {string}', function (string) {
+var chaiAsPromised = require("chai-as-promised");
+chai.use(chaiAsPromised);
 
-    assert.equal('', '')
-  });
+var expect = chai.expect;
+
+Before(function (scenario, callback) {
+  this.homepage = new HomePage();
+
+  callback();
+});
+
+Given("I go to {string}", function (string) {
+  this.homepage.navigateToHome();
+  
+  expect(browser.getCurrentUrl()).to.eventually.equal("http://localhost:8080");
+});
