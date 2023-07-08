@@ -11,10 +11,10 @@
     "buildDev": "ng build --watch --configuration development",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "deploy":"gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "test": "ng test --watch false",
     "coverage": "ng test --no-watch --code-coverage",
-    "e2e": "webdriver-manager start && protractor ./src/test/protractor-config.js",
+    "e2e": "protractor protractor-config.js",
     "dockerBuild": "docker build -f Dockerfile -t neurodiversity-main .",
     "dockerRun": "docker run  --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --env=NODE_VERSION=14.21.3 --env=YARN_VERSION=1.22.19 --workdir=/ -p 8080:8080 --runtime=runc -d neurodiversity-main:latest"
   },
@@ -35,7 +35,6 @@
     "express.js": "^1.0.0",
     "jquery": "^3.7.0",
     "rxjs": "~7.5.0",
-    "tslib": "^2.3.0",
     "zone.js": "~0.13.1"
   },
   "devDependencies": {
@@ -43,7 +42,15 @@
     "@angular/cli": "~16.1.4",
     "@angular/compiler-cli": "^16.1.4",
     "@angular/localize": "^16.1.4",
+    "@cucumber/cucumber": "^7.1.0",
+    "@cucumber/pretty-formatter": "^1.0.0",
+    "@types/chai": "^4.3.5",
+    "@types/cucumber": "^6.0.1",
     "@types/jasmine": "~4.0.0",
+    "@types/node": "^20.4.1",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "cucumber-html-reporter": "^7.1.1",
     "gh-pages": "^5.0.0",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
@@ -51,7 +58,10 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~4.9.5"
+    "protractor-cucumber-framework": "^9.4.0",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.6.0",
+    "typescript": "^5.1.6"
   },
   "publishConfig": {
     "registry": "https://github.com/Neurodiversity-in-Business"
