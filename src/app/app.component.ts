@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'neurodiversity-main';
+  title = 'Neurodiversity in Business';
   navActiveId = 1;
 
   ngOnInit() {}

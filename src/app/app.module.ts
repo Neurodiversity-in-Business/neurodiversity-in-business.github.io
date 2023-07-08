@@ -28,6 +28,6 @@ import { HubComponent } from './hub/hub.component';
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   exports: [],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
