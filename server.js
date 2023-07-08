@@ -1,18 +1,17 @@
 const express = require("express");
-const path = require("path")
-
+const path = require("path");
 
 const { spawn } = require("child_process");
 const app = express();
 const port = 8080;
 
 // set up rate limiter: maximum of five requests per minute
-var RateLimit = require('express-rate-limit');
+var RateLimit = require("express-rate-limit");
 var limiter = RateLimit({
-  windowMs: 1*60*1000, // 1 minute
-  max: 5
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 5,
 });
-app.use(limiter)
+app.use(limiter);
 
 // Use body-parser
 var bodyParser = require("body-parser");

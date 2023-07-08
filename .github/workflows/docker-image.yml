@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "development" ]
+    branches: ["development"]
   pull_request:
-    branches: [ "development" ]
+    branches: ["development"]
 
 jobs:
   build:
@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Package Application
-      run: |
-        npm install -g @angular/cli
-        npm install
-        npm run-script build
-        docker build . --file Dockerfile --tag neurodiversity-main:$(date +%s)
+      - uses: actions/checkout@v3
+      - name: Package Application
+        run: |
+          npm install -g @angular/cli
+          npm install
+          npm run-script build
+          docker build . --file Dockerfile --tag neurodiversity-main:$(date +%s)
