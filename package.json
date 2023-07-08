@@ -1,8 +1,8 @@
 {
-  "name": "@Neurodiversity-in-Business/neurodiversity-main",
+  "name": "@Neurodiversity-in-Business/neurodiversity-in-business.github.io",
   "version": "0.5.1",
   "author": "Usi Diamond",
-  "homepage": "https://neurodiversity.org",
+  "homepage": "https://neurodiversity-in-business.github.io",
   "description": "Neurodiversity in Buisness (NiB) is a business-led forum functioning as an industry group for organisations to share industry good practice on ND recruitment, retention and empowerment.",
   "scripts": {
     "ng": "ng",
@@ -11,6 +11,7 @@
     "buildDev": "ng build --watch --configuration development",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
+    "deploy":"gh-pages -d build",
     "test": "ng test --watch false",
     "coverage": "ng test --no-watch --code-coverage",
     "e2e": "webdriver-manager start && protractor ./src/test/protractor-config.js",
@@ -43,6 +44,7 @@
     "@angular/compiler-cli": "^16.1.4",
     "@angular/localize": "^16.1.4",
     "@types/jasmine": "~4.0.0",
+    "gh-pages": "^5.0.0",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
