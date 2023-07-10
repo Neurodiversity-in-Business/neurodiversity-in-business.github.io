@@ -19,10 +19,10 @@ Before(function (scenario, callback) {
 
 Given("I go to {string}", function (string) {
   this.homepage.navigateToHome();
-  
+
   expect(browser.getCurrentUrl()).to.eventually.equal("http://localhost:8080");
 });
-Then('click on the Home Button', function () {
+Then("click on the Home Button", function () {
   // Write code here that turns the phrase above into concrete actions
-  expect("").to.be.equal('')
+  expect("").to.be.equal("");
 });
