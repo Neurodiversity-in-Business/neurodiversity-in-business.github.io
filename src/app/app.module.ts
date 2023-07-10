@@ -10,7 +10,7 @@ import { MemberStartComponent } from './member-start/member-start.component';
 import { ResearchComponent } from './research/research.component';
 import { VolunteerStartComponent } from './volunteer-start/volunteer-start.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HubComponent } from './hub/hub.component';
 import {
   FaIconLibrary,
@@ -30,7 +30,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
     ContactUsComponent,
     HubComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule, NgbCarouselModule],
   exports: [],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,15 +1,27 @@
 <div class="container-fluid">
   <div class="topbar row">
-    <div class="accessibility-tools col">Accessibility Tools Here</div>
+    <div class="accessibility-tools col">
+      <a href="#homeContent" class="skip-to-main-content-link"
+        >Skip to main content</a
+      >
+    </div>
 
     <div class="col">
       <span>
-        <a href="https://twitter.com/NDinBusiness" target="_blank">
+        <a
+          href="https://twitter.com/NDinBusiness"
+          target="_blank"
+          title="Twitter"
+        >
           <i class="fab fa-twitter fa-2x"></i>
         </a>
       </span>
       <span>
-        <a href="https://www.linkedin.com/company/80093288" target="_blank">
+        <a
+          href="https://www.linkedin.com/company/80093288"
+          target="_blank"
+          title="LinkedIn"
+        >
           <i class="fab fa-linkedin fa-2x"></i>
         </a>
       </span>
@@ -17,12 +29,17 @@
         <a
           href="https://www.youtube.com/channel/UCk0YOpwyHt8IoJMNmOUHy1g"
           target="_blank"
+          title="Youtube"
         >
           <i class="fab fa-youtube fa-2x"></i>
         </a>
       </span>
       <span>
-        <a href="https://www.instagram.com/ndinbusiness/" target="_blank">
+        <a
+          href="https://www.instagram.com/ndinbusiness/"
+          target="_blank"
+          title="Instagram"
+        >
           <i class="fab fa-instagram fa-2x"></i>
         </a>
       </span>
@@ -33,7 +50,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
   <div class="container-fluid">
     <div class="ml-auto">
-      <img src="../assets/logo.png" />
+      <img src="../assets/logo.png" alt="Neurodiversit in Buisness Logo" />
     </div>
     <div class="ml-auto">
       <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
@@ -46,7 +63,9 @@
         >
           <li [ngbNavItem]="1">
             <button ngbNavLink>Home</button>
-            <ng-template ngbNavContent> <app-home></app-home></ng-template>
+            <ng-template ngbNavContent>
+              <app-home id="homeContent"></app-home
+            ></ng-template>
           </li>
           <li [ngbNavItem]="2">
             <button ngbNavLink>About Us</button>
