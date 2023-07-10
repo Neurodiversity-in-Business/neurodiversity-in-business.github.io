@@ -8,8 +8,7 @@ import { VolunteerStartComponent } from './volunteer-start/volunteer-start.compo
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HubComponent } from './hub/hub.component';
 
-const routes: Routes = [
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
