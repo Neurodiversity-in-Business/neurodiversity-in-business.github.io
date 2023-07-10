@@ -48,4 +48,5 @@ export class HomeComponent {
       this.togglePaused();
     }
   }
+
 }
