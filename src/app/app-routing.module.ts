@@ -9,14 +9,6 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HubComponent } from './hub/hub.component';
 
 const routes: Routes = [
-  { path: '**', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'member-start', component: MemberStartComponent },
-  { path: 'hub', component: HubComponent },
-  { path: 'research', component: ResearchComponent },
-  { path: 'volunteer-start', component: VolunteerStartComponent },
-  { path: 'contact-us', component: ContactUsComponent },
 ];
 
 @NgModule({
