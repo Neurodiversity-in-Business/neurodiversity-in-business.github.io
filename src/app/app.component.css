@@ -1,4 +1,3 @@
-// styles.scss
 ul {
   list-style: none;
 }
@@ -19,6 +18,9 @@ img {
   box-shadow: none;
 }
 
+.list-content {
+  align: left;
+}
 
 .topbar {
   text-align: right;
