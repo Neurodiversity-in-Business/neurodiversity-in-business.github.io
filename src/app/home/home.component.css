@@ -1,0 +1,9 @@
+.danquote {
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#introText {
+  text-align: left;
+}
