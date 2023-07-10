@@ -4,7 +4,9 @@ ul {
 
 li {
   display: inline-block;
+
   margin-right: 10px;
+
 }
 
 img {
@@ -53,6 +55,7 @@ img {
   color: #517fa4;
 }
 
+
 .skip-to-main-content-link {
   position: absolute;
   left: -9999px;
@@ -71,3 +74,5 @@ img {
 button {
   color: #0869f8;
 }
+
+
