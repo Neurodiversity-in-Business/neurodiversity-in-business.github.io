@@ -1,5 +1,6 @@
 /* Remove the navbar's default margin-bottom and rounded borders */
 
+
 h1 {
   font-family: "Montserrat", Sans-serif;
   background: #9b51e0;
@@ -9,6 +10,7 @@ h1 {
 h2 {
   font-family: "Montserrat", Sans-serif;
 }
+
 
 .navbar {
     margin-bottom: 0;
@@ -52,4 +54,5 @@ h2 {
     color: white;
     padding: 15px;
   }
+
   
