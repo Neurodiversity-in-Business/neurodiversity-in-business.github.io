@@ -4,7 +4,7 @@ ul {
 
 li {
   display: inline-block;
-  margin-right: 10px; /* add spacing between items */
+  margin-right: 10px; 
 }
 
 img {
@@ -44,7 +44,7 @@ img {
 .fa-youtube-square {
   color: #bb0000;
 }
-<
+
 .fa-linkedin,
 .fa-linkedin-square {
   color: #007bb6;
