@@ -6,3 +6,71 @@ li {
   display: inline-block;
   margin-right: 10px; /* add spacing between items */
 }
+
+img {
+  height: auto;
+  width: 141px;
+  max-width: 100%;
+  border: none;
+  vertical-align: middle;
+  display: inline-block;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.list-content {
+  align: left;
+}
+
+.topbar {
+  text-align: right;
+}
+
+.accessibility-tools {
+  text-align: left;
+}
+
+.fa-facebook,
+.fa-facebook-square {
+  color: #3b5998;
+}
+.fa-twitter,
+.fa-twitter-square {
+  color: #00aced;
+}
+.fa-google-plus,
+.fa-google-plus-square {
+  color: #dd4b39;
+}
+.fa-youtube,
+.fa-youtube-play,
+.fa-youtube-square {
+  color: #bb0000;
+}
+.fa-tumblr,
+.fa-tumblr-square {
+  color: #32506d;
+}
+.fa-vine {
+  color: #00bf8f;
+}
+.fa-flickr {
+  color: #ff0084;
+}
+.fa-vimeo-square {
+  color: #aad450;
+}
+.fa-pinterest,
+.fa-pinterest-square {
+  color: #cb2027;
+}
+.fa-linkedin,
+.fa-linkedin-square {
+  color: #007bb6;
+}
+.fa-instagram {
+  color: #517fa4;
+}
+.fa-spotify {
+  color: #1ed760;
+}
