@@ -257,7 +257,6 @@ module.exports = {
           // androidDeviceSerial: ''
         },
       },
-
       webdriver: {
         start_process: true,
         // path to chromedriver executable which can work with the factory
