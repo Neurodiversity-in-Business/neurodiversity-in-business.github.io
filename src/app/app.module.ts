@@ -21,6 +21,9 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { CompanyLogosCaroselComponent } from './home/carosels/company-logos-carosel/company-logos-carosel.component';
 import { CommunityLogosCaroselComponent } from './home/carosels/community-logos-carosel/community-logos-carosel.component';
 import { CaroselsComponent } from './home/carosels/carosels.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
+import { SlaveryPolicyComponent } from './slavery-policy/slavery-policy.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +38,9 @@ import { CaroselsComponent } from './home/carosels/carosels.component';
     CompanyLogosCaroselComponent,
     CommunityLogosCaroselComponent,
     CaroselsComponent,
+    PrivacyPolicyComponent,
+    CookiePolicyComponent,
+    SlaveryPolicyComponent,
   ],
   imports: [
     BrowserModule,
