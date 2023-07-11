@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="topbar row">
     <div class="accessibility-tools col">
-      <a href="#homeContent" class="skip-to-main-content-link"
+      <a href="#navOutlet" class="skip-to-main-content-link"
         >Skip to main content</a
       >
     </div>
@@ -64,7 +64,7 @@
           <li [ngbNavItem]="1">
             <button ngbNavLink>Home</button>
             <ng-template ngbNavContent>
-              <app-home id="homeContent"></app-home
+              <app-home ></app-home
             ></ng-template>
           </li>
           <li [ngbNavItem]="2">
@@ -113,6 +113,6 @@
     </div>
   </div>
 </nav>
-<div [ngbNavOutlet]="nav" class="mt-2"></div>
+<div [ngbNavOutlet]="nav" id="navOutlet" class="mt-2"></div>
 
 <app-footer> </app-footer>
