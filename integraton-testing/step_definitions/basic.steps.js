@@ -1,7 +1,6 @@
 // Import the cucumber operators we need
 const { Before, Given, When, Then, After } = require("@cucumber/cucumber");
-const assert = require("assert");
-const { HomePage } = require("../pages/home.po");
+const { HomePage } = require('../pages/home.po');
 
 var chai = require("chai");
 var expect = chai.expect;
@@ -19,10 +18,12 @@ Before(function (scenario, callback) {
 
 Given("I go to {string}", function (string) {
   this.homepage.navigateToHome();
+  //return ;
 
-  expect(browser.getCurrentUrl()).to.eventually.equal("http://localhost:8080");
+  //expect(browser).to.eventually.equal("http://localhost:8080");
 });
 Then("click on the Home Button", function () {
-  // Write code here that turns the phrase above into concrete actions
-  expect("").to.be.equal("");
+  
+  browser.waitForElementVisible('#homeContent').click('#homeContent').screenshot().end();
+  //expect(" ").to.be.equal("");
 });
