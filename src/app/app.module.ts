@@ -18,6 +18,9 @@ import {
 } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import { CompanyLogosCaroselComponent } from './home/carosels/company-logos-carosel/company-logos-carosel.component';
+import { CommunityLogosCaroselComponent } from './home/carosels/community-logos-carosel/community-logos-carosel.component';
+import { CaroselsComponent } from './home/carosels/carosels.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,8 +32,17 @@ import { far } from '@fortawesome/free-regular-svg-icons';
     VolunteerStartComponent,
     ContactUsComponent,
     HubComponent,
+    CompanyLogosCaroselComponent,
+    CommunityLogosCaroselComponent,
+    CaroselsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule, NgbCarouselModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    FontAwesomeModule,
+    NgbCarouselModule,
+  ],
   exports: [],
   providers: [],
   bootstrap: [AppComponent],
