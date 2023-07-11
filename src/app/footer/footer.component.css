@@ -4,5 +4,17 @@ footer {
   bottom: 0;
   left: 0;
   padding: 1rem;
+  color: aliceblue;
   text-align: center;
+}
+
+a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.bottomText {
+  text-align: center;
+  position: relative;
+  bottom: 0;
 }

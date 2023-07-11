@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { RouterModule, Routes } from '@angular/router';
-import { MemberStartComponent } from './member-start/member-start.component';
-import { ResearchComponent } from './research/research.component';
-import { VolunteerStartComponent } from './volunteer-start/volunteer-start.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { HubComponent } from './hub/hub.component';
 
-const routes: Routes = [];
+import { RouterModule, Routes } from '@angular/router';
+
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
+import { SlaveryPolicyComponent } from './slavery-policy/slavery-policy.component';
+
+const routes: Routes = [
+  { path: 'privacy', component: PrivacyPolicyComponent },
+  { path: 'cookie', component: CookiePolicyComponent },
+  { path: 'slavery', component: SlaveryPolicyComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
