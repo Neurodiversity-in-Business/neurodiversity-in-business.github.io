@@ -32,62 +32,10 @@
     </div>
   </div>
 </div>
-
-<div class="container-fluid">
-  <h2>NiB's Corporate Partners</h2>
-  <ngb-carousel
-    #carousel
-    [interval]="3000"
-    [pauseOnHover]="true"
-    [pauseOnFocus]="true"
-    (slide)="onSlide($event)"
-  >
-    <ng-template ngbSlide *ngFor="let img of images; index as i">
-      <div class="carousel-caption">
-        <h3>My slide {{ i + 1 }} title</h3>
-      </div>
-      <a
-        href="https://www.google.fr/?q=Number+{{ i + 1 }}"
-        target="_blank"
-        rel="nofollow noopener noreferrer"
-      >
-        <div class="picsum-img-wrapper">
-          <img [src]="img" alt="My image {{ i + 1 }} description" />
-        </div>
-      </a>
-    </ng-template>
-  </ngb-carousel>
-
-  <hr />
-</div>
-
-<div class="container-fluid">
-  <h2>NiB's Community Partners</h2>
-  <ngb-carousel
-    #carousel
-    [interval]="3000"
-    [pauseOnHover]="true"
-    [pauseOnFocus]="true"
-    (slide)="onSlide($event)"
-  >
-    <ng-template ngbSlide *ngFor="let img of images; index as i">
-      <div class="carousel-caption">
-        <h3>My slide {{ i + 1 }} title</h3>
-      </div>
-      <a
-        href="https://www.google.fr/?q=Number+{{ i + 1 }}"
-        target="_blank"
-        rel="nofollow noopener noreferrer"
-      >
-        <div class="picsum-img-wrapper">
-          <img [src]="img" alt="My image {{ i + 1 }} description" />
-        </div>
-      </a>
-    </ng-template>
-  </ngb-carousel>
-</div>
-
-<hr />
+<hr hr />
+<app-company-logos-carosel></app-company-logos-carosel>
+<app-community-logos-carosel></app-community-logos-carosel>
+<hr hr />
 <div class="container-fluid">
   <i class="fas fa-quote-left fa-xs text-primary"></i>
   <div class="row">
@@ -108,7 +56,6 @@
     </div>
   </div>
 </div>
-
 
 <hr />
 <div class="container-fluid">
@@ -193,6 +140,3 @@
 <br />
 <br />
 <br />
-
-  
-
