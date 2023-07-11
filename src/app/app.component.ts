@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, fromEvent } from 'rxjs';
 
-import { startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',

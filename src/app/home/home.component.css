@@ -8,11 +8,10 @@
   text-align: left;
 }
 
-
-h1, h2 {
-    font-family: "Montserrat", Sans-serif;
-    background: #9b51e0;
-    color: white;
-    font-style: bold;
-  }
-
+h1,
+h2 {
+  font-family: "Montserrat", Sans-serif;
+  background: #9b51e0;
+  color: white;
+  font-style: bold;
+}
