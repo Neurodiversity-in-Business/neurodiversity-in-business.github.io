@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'Neurodiversity in Business';
   navActiveId = 1;
+  isContentShown = true;
   isMenuCollapsed = false;
   public isMobileLayout = false;
   ngOnInit() {
@@ -16,6 +16,15 @@ export class AppComponent implements OnInit {
       this.isMobileLayout = window.innerWidth <= 991;
       this.isMenuCollapsed = this.isMobileLayout;
     };
+  }
+  toggleContent(flag: string) {
+    console.log('hiding navoutlet');
+    if (flag == 'hide') {
+      this.isContentShown = false;
+    }
+    else {
+      this.isContentShown = true;
+    }
   }
 }
 import fontawesome from '@fortawesome/fontawesome';
