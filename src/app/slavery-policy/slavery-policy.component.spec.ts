@@ -8,7 +8,7 @@ describe('SlaveryPolicyComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SlaveryPolicyComponent]
+      declarations: [SlaveryPolicyComponent],
     });
     fixture = TestBed.createComponent(SlaveryPolicyComponent);
     component = fixture.componentInstance;
