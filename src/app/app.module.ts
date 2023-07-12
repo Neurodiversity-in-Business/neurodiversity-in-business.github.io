@@ -24,6 +24,7 @@ import { CaroselsComponent } from './home/carosels/carosels.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 import { SlaveryPolicyComponent } from './slavery-policy/slavery-policy.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,7 @@ import { SlaveryPolicyComponent } from './slavery-policy/slavery-policy.componen
     NgbCarouselModule,
   ],
   exports: [],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {
