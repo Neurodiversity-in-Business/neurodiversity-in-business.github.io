@@ -1,4 +1,4 @@
-<div class="accessibility-tools">
+<span class="accessibility-tools">
   <a
     #skipLink
     id="skipLink"
@@ -6,7 +6,7 @@
     class="skip-to-main-content-link"
     >Skip to main content</a
   >
-</div>
+</span>
 
 <span *ngIf="isContentShown">
   <nav class="navbar navbar-light bg-light mb-3 navigation">
@@ -87,16 +87,10 @@
       </div>
     </div>
   </nav>
-  <div
-
-    [ngbNavOutlet]="nav"
-    id="navOutlet"
-    class="mt-2"
-  ></div
+  <div [ngbNavOutlet]="nav" id="navOutlet" class="mt-2"></div
 ></span>
-<div class="container-fluid" *ngIf="!isContentShown">
+<div *ngIf="!isContentShown">
   <router-outlet></router-outlet>
 </div>
-
 
 <app-footer> </app-footer>
