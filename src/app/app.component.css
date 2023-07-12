@@ -12,7 +12,7 @@ li {
   font-weight: bold;
 }
 
- button:hover , button:focus {
+button:focus {
   background-color: purple;
   color: aliceblue;
   font-weight: bold;

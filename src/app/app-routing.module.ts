@@ -9,7 +9,7 @@ import { SlaveryPolicyComponent } from './slavery-policy/slavery-policy.componen
 const routes: Routes = [
   { path: 'privacy', component: PrivacyPolicyComponent },
   { path: 'cookie', component: CookiePolicyComponent },
-  { path: 'slavery', component: SlaveryPolicyComponent }
+  { path: 'slavery', component: SlaveryPolicyComponent },
 ];
 
 @NgModule({
