@@ -9,7 +9,6 @@
   <br />
   <br />
   <br />
-
 </span>
 <div class="container-fluid">
   <div class="topbar row">
@@ -22,7 +21,7 @@
 </div>
 
 <span *ngIf="isContentShown">
-  <nav  class="navbar navbar-expand-sm navbar-light bg-light mb-3 navigation">
+  <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3 navigation">
     <div class="container-fluid">
       <span *ngIf="isMobileLayout" class="col-sm-3">
         <img
@@ -38,12 +37,11 @@
           src="../assets/logo.png"
           alt="Neurodiversit in Buisness Logo"
         />
-
       </div>
       <div class="col" style="text-align: right">
         <div [(ngbCollapse)]="isMenuCollapsed" class="collapse navbar-collapse">
           <ul
-          [keyboard]="true"
+            [keyboard]="true"
             ngbNav
             [ngbCollapse]="isMenuCollapsed"
             #nav="ngbNav"
@@ -104,7 +102,6 @@
   <div [ngbNavOutlet]="nav" id="navOutlet" class="mt-2"></div
 ></span>
 <div class="container-fluid" *ngIf="!isContentShown">
-  
   <router-outlet></router-outlet>
 </div>
 <app-footer> </app-footer>
