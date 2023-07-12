@@ -1,5 +1,6 @@
 footer {
-  padding: 1rem;
+  position: static;
+  bottom: 0;
   color: aliceblue;
   text-align: center;
 }
