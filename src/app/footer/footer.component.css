@@ -1,8 +1,9 @@
 footer {
-  position: static;
+  position: fixed;
   bottom: 0;
   color: aliceblue;
   text-align: center;
+  width: 100%;
 }
 
 a {
