@@ -8,15 +8,14 @@ li {
   margin-right: 10px;
 }
 
-
-
+button:hover,
 button:focus {
   background-color: purple;
   color: aliceblue;
   font-weight: bold;
 }
 
-img {
+img.logo {
   height: auto;
   width: 141px;
   max-width: 100%;
@@ -64,7 +63,6 @@ button {
   width: 100%;
   z-index: 99;
 }
-
 
 .navigation button {
   font-weight: bold;
