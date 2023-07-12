@@ -9,6 +9,7 @@ import { DisplayContentService } from '../display-content.service';
 export class FooterComponent {
   constructor(private displayContentService: DisplayContentService) {}
   sendCloseEventToLanding() {
+    window.scrollTo(0, 0);
     this.displayContentService.hideContent();
   }
 }
