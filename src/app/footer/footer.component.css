@@ -1,5 +1,4 @@
 footer {
-  position: absolute;
   color: aliceblue;
   text-align: center;
   width: 100%;
@@ -13,7 +12,6 @@ a {
 
 .bottomText {
   text-align: center;
-  position: relative;
   bottom: 0;
 }
 
