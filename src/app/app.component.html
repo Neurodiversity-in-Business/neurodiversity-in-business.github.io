@@ -1,3 +1,17 @@
+
+<!--padding for floating header-->
+<span *ngIf="isContentShown">
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+</span>
 <div class="container-fluid">
   <div class="topbar row">
     <div class="accessibility-tools col">
@@ -5,56 +19,16 @@
         >Skip to main content</a
       >
     </div>
-
-    <div class="col">
-      <span>
-        <a
-          href="https://twitter.com/NDinBusiness"
-          target="_blank"
-          title="Twitter"
-        >
-          <i class="fab fa-twitter fa-2x"></i>
-        </a>
-      </span>
-      <span>
-        <a
-          href="https://www.linkedin.com/company/80093288"
-          target="_blank"
-          title="LinkedIn"
-        >
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-      </span>
-      <span>
-        <a
-          href="https://www.youtube.com/channel/UCk0YOpwyHt8IoJMNmOUHy1g"
-          target="_blank"
-          title="Youtube"
-        >
-          <i class="fab fa-youtube fa-2x"></i>
-        </a>
-      </span>
-      <span>
-        <a
-          href="https://www.instagram.com/ndinbusiness/"
-          target="_blank"
-          title="Instagram"
-        >
-          <i class="fab fa-instagram fa-2x"></i>
-        </a>
-      </span>
-    </div>
   </div>
 </div>
 
-
-<span *ngIf="isContentShown" class="">
+<span *ngIf="isContentShown">
   <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 navigation">
     <div class="container-fluid">
-      <div class="ml-auto">
+      <div class="col-sm-3">
         <img src="../assets/logo.png" alt="Neurodiversit in Buisness Logo" />
       </div>
-      <div class="ml-auto">
+      <div class="col" style="text-align: right">
         <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
           <ul
             ngbNav
@@ -68,9 +42,7 @@
               <ng-template ngbNavContent> <app-home></app-home></ng-template>
             </li>
             <li [ngbNavItem]="2">
-              <button (click)="toggleContent('show')" ngbNavLink>
-                About Us
-              </button>
+              <button ngbNavLink>About Us</button>
               <ng-template ngbNavContent> <app-about></app-about></ng-template>
             </li>
             <li [ngbNavItem]="3">
@@ -121,12 +93,5 @@
 <span *ngIf="!isContentShown">
   <router-outlet></router-outlet>
 </span>
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br /><br />
 <br />
 <app-footer> </app-footer>
