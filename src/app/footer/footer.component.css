@@ -18,3 +18,26 @@ a {
   position: relative;
   bottom: 0;
 }
+
+.fa-facebook,
+.fa-facebook-square {
+  color: #3b5998;
+}
+.fa-twitter,
+.fa-twitter-square {
+  color: #00aced;
+}
+
+.fa-youtube,
+.fa-youtube-play,
+.fa-youtube-square {
+  color: #bb0000;
+}
+
+.fa-linkedin,
+.fa-linkedin-square {
+  color: #007bb6;
+}
+.fa-instagram {
+  color: #517fa4;
+}

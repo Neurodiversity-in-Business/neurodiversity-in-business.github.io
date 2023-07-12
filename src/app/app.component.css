@@ -8,9 +8,7 @@ li {
   margin-right: 10px;
 }
 
-.navigation button {
-  font-weight: bold;
-}
+
 
 button:hover,
 button:focus {
@@ -42,29 +40,6 @@ img {
   text-align: left;
 }
 
-.fa-facebook,
-.fa-facebook-square {
-  color: #3b5998;
-}
-.fa-twitter,
-.fa-twitter-square {
-  color: #00aced;
-}
-
-.fa-youtube,
-.fa-youtube-play,
-.fa-youtube-square {
-  color: #bb0000;
-}
-
-.fa-linkedin,
-.fa-linkedin-square {
-  color: #007bb6;
-}
-.fa-instagram {
-  color: #517fa4;
-}
-
 .skip-to-main-content-link {
   position: absolute;
   left: -9999px;
@@ -82,4 +57,16 @@ img {
 
 button {
   color: #0869f8;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+
+.navigation button {
+  font-weight: bold;
 }
