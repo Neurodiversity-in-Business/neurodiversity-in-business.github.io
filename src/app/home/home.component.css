@@ -5,16 +5,22 @@
 }
 
 #introText {
-  text-align: left;
+  text-align: center;
 }
 
 
 h1,
 h2 {
   font-family: "Montserrat", Sans-serif;
+  font-weight: bold;
   background: #9b51e0;
   color: white;
   font-style: bold;
   text-align: left;
   padding: 40px;
 }
+
+.blurbs {
+  text-align: center;
+}
+
