@@ -10,7 +10,6 @@ li {
 
 
 
-button:hover,
 button:focus {
   background-color: purple;
   color: aliceblue;
