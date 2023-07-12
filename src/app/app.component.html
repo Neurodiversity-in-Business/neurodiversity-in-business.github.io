@@ -1,33 +1,18 @@
-<!--padding for floating header-->
-<span *ngIf="isContentShown">
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-</span>
-<div class="container-fluid">
-  <div class="topbar row">
-    <div class="accessibility-tools col">
-      <a href="#navOutlet" class="skip-to-main-content-link"
-        >Skip to main content</a
-      >
-    </div>
-  </div>
+<div class="accessibility-tools">
+  <a href="#navOutlet" class="skip-to-main-content-link"
+    >Skip to main content</a
+  >
 </div>
 
 <span *ngIf="isContentShown">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 navigation">
+  <nav class="navbar navbar-light bg-light mb-3 fixed-top navigation">
     <div class="container-fluid">
       <span *ngIf="isMobileLayout" class="col-sm-3">
         <img
+          style="width: 100px"
           class="logo"
           src="../assets/logo.png"
-          alt="Neurodiversit in Buisness Logo"
+          alt="Neurodiversity in Buisness Logo"
         />
       </span>
 
@@ -35,12 +20,13 @@
         <img
           class="logo"
           src="../assets/logo.png"
-          alt="Neurodiversit in Buisness Logo"
+          alt="Neurodiversity in Buisness Logo"
         />
       </div>
       <div class="col" style="text-align: right">
-        <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+        <div [(ngbCollapse)]="isMenuCollapsed" class="collapse navbar-collapse">
           <ul
+            [keyboard]="true"
             ngbNav
             [ngbCollapse]="isMenuCollapsed"
             #nav="ngbNav"
@@ -97,11 +83,14 @@
       </div>
     </div>
   </nav>
-
-  <div [ngbNavOutlet]="nav" id="navOutlet" class="mt-2"></div
+  <div
+    style="padding-top: 200px"
+    [ngbNavOutlet]="nav"
+    id="navOutlet"
+    class="mt-2"
+  ></div
 ></span>
-<span *ngIf="!isContentShown">
+<div class="container-fluid" *ngIf="!isContentShown">
   <router-outlet></router-outlet>
-</span>
-<br />
+</div>
 <app-footer> </app-footer>
