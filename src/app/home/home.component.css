@@ -1,5 +1,5 @@
 .danquote {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   font-style: italic;
 }
@@ -8,10 +8,13 @@
   text-align: left;
 }
 
+
 h1,
 h2 {
   font-family: "Montserrat", Sans-serif;
   background: #9b51e0;
   color: white;
   font-style: bold;
+  text-align: left;
+  padding: 40px;
 }
