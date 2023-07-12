@@ -8,7 +8,7 @@ describe('CookiePolicyComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CookiePolicyComponent]
+      declarations: [CookiePolicyComponent],
     });
     fixture = TestBed.createComponent(CookiePolicyComponent);
     component = fixture.componentInstance;

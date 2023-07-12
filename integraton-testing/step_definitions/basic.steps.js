@@ -1,6 +1,6 @@
 // Import the cucumber operators we need
 const { Before, Given, When, Then, After } = require("@cucumber/cucumber");
-const { HomePage } = require('../pages/home.po');
+const { HomePage } = require("../pages/home.po");
 
 var chai = require("chai");
 var expect = chai.expect;
@@ -23,7 +23,10 @@ Given("I go to {string}", function (string) {
   //expect(browser).to.eventually.equal("http://localhost:8080");
 });
 Then("click on the Home Button", function () {
-  
-  browser.waitForElementVisible('#homeContent').click('#homeContent').screenshot().end();
+  browser
+    .waitForElementVisible("#homeContent")
+    .click("#homeContent")
+    .screenshot()
+    .end();
   //expect(" ").to.be.equal("");
 });
