@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { DisplayContentService } from './display-content.service';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,16 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   constructor(private displayContentService: DisplayContentService) {}
+  @ViewChild('nav') nav: ElementRef;
   title = 'Neurodiversity in Business';
   navActiveId = 1;
   isContentShown = true;
-  isMenuCollapsed = false;
+  isMenuCollapsed = window.innerWidth <= 991;
   public isMobileLayout = false;
   ngOnInit() {
+    if (window.innerWidth <= 991) {
+      this.isMobileLayout = true;
+    }
     window.onresize = () => {
       this.isMobileLayout = window.innerWidth <= 991;
       this.isMenuCollapsed = this.isMobileLayout;
@@ -32,14 +37,13 @@ export class AppComponent implements OnInit {
   }
   toggleContent(flag: string) {
     if (flag == 'hide') {
-      this.isContentShown = !this.isContentShown;
+      this.isContentShown = false;
     } else {
-      this.isContentShown = !this.isContentShown;
+      this.isContentShown = true;
     }
   }
 }
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
-import { DisplayContentService } from './display-content.service';
 
 fontawesome.library.add(brands);

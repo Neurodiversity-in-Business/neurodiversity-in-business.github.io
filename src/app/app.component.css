@@ -8,6 +8,10 @@ li {
   margin-right: 10px;
 }
 
+body {
+  margin: 0;
+}
+
 button:hover,
 button:focus {
   background-color: purple;
@@ -58,10 +62,7 @@ button {
 }
 
 .navigation {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 99;
+  padding-bottom: 0px;
 }
 
 .navigation button {
