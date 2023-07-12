@@ -5,7 +5,7 @@
 }
 
 #introText {
-  text-align: left;
+  text-align: center;
 }
 
 
@@ -18,3 +18,8 @@ h2 {
   text-align: left;
   padding: 40px;
 }
+
+.blurbs {
+  text-align: center;
+}
+
