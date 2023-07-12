@@ -1,9 +1,9 @@
 footer {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
   color: aliceblue;
   text-align: center;
   width: 100%;
+  padding: 15px;
 }
 
 a {
