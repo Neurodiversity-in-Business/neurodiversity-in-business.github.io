@@ -1,15 +1,14 @@
-
 <!--padding for floating header-->
 <span *ngIf="isContentShown">
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 
 </span>
 <div class="container-fluid">
@@ -25,8 +24,21 @@
 <span *ngIf="isContentShown">
   <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 navigation">
     <div class="container-fluid">
-      <div class="col-sm-3">
-        <img src="../assets/logo.png" alt="Neurodiversit in Buisness Logo" />
+      <span *ngIf="isMobileLayout" class="col-sm-3">
+        <img
+          class="logo"
+          src="../assets/logo.png"
+          alt="Neurodiversit in Buisness Logo"
+        />
+      </span>
+
+      <div *ngIf="!isMobileLayout" class="col-sm-3">
+        <img
+          class="logo"
+          src="../assets/logo.png"
+          alt="Neurodiversit in Buisness Logo"
+        />
+
       </div>
       <div class="col" style="text-align: right">
         <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
