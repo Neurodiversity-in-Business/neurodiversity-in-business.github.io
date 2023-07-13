@@ -2,14 +2,14 @@ name: Integration Testing
 
 on:
   pull_request:
-    branches: ["staging"]
+    branches: ["staging","development","feature/*","maintenance/*","bugfix/*"]
 
 jobs:
   build:
     strategy:
       matrix:
         node-version: [20.x]
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v3
