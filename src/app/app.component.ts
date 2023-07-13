@@ -1,4 +1,10 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { DisplayContentService } from './display-content.service';
 
 @Component({
@@ -6,8 +12,30 @@ import { DisplayContentService } from './display-content.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit {
-  constructor(private displayContentService: DisplayContentService) {}
+export class AppComponent implements OnInit, AfterViewInit {
+  constructor(
+    private displayContentService: DisplayContentService,
+    private router: Router
+  ) {}
+  ngAfterViewInit(): void {
+    let this$ = this;
+
+    if (window.location.hash != '#/') {
+      console.log('triggered');
+      this.displayContentService.hideContent();
+      this.router.navigate(['/', window.location.hash.replace('/','').replace('#','')]);
+    }
+
+    this.displayContentService.displayContentObservable$.subscribe({
+      next(flag) {
+        if (flag == 'hide') {
+          this$.isContentShown = false;
+        } else {
+          this$.isContentShown = true;
+        }
+      },
+    });
+  }
   @ViewChild('nav') nav: ElementRef;
   title = 'Neurodiversity in Business';
   navActiveId = 1;
@@ -22,18 +50,6 @@ export class AppComponent implements OnInit {
       this.isMobileLayout = window.innerWidth <= 991;
       this.isMenuCollapsed = this.isMobileLayout;
     };
-    let this$ = this;
-    this.displayContentService.displayContentObservable$.subscribe({
-      next(flag) {
-        if (flag == 'hide') {
-          this$.isContentShown = false;
-          //this.isContentShown = false;
-        } else {
-          this$.isContentShown = true;
-          //this.displayContentService.showContent();
-        }
-      },
-    });
   }
   toggleContent(flag: string) {
     if (flag == 'hide') {
@@ -45,5 +61,6 @@ export class AppComponent implements OnInit {
 }
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
+import { NavigationStart, Router } from '@angular/router';
 
 fontawesome.library.add(brands);
