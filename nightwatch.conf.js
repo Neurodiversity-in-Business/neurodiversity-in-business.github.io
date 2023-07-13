@@ -53,9 +53,9 @@ module.exports = {
         javascriptEnabled: true,
         acceptSslCerts: true,
         browserName: "chrome",
-        chromeOptions : {
-          "args" : ["headless", "no-sandbox", "disable-gpu"]
-        }
+        chromeOptions: {
+          args: ["headless", "no-sandbox", "disable-gpu"],
+        },
       },
 
       webdriver: {

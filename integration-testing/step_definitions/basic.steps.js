@@ -17,13 +17,16 @@ Before(function (scenario, callback) {
 
 Given("I go to {string}", function (string) {
   this.homepage.navigateToHome();
-  browser.pause(3000)
+  browser.pause(3000);
 });
 Then("I click on the Skip to Content link", function () {
   browser.perform(function () {
     const actions = this.actions();
     actions.click("#skipLink").pause(1000);
-    browser.waitForElementPresent("#pageHeader").element("#pageHeader").expect.isSelected();
+    browser
+      .waitForElementPresent("#pageHeader")
+      .element("#pageHeader")
+      .expect.isSelected();
   });
 });
 Then("the first header has focus", async function () {

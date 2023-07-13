@@ -20,10 +20,13 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     let this$ = this;
 
-    if (window.location.hash != '#/' && window.location.hash.length != 0 ) {
+    if (window.location.hash != '#/' && window.location.hash.length != 0) {
       console.log('triggered');
       this.displayContentService.hideContent();
-      this.router.navigate(['/', window.location.hash.replace('/','').replace('#','')]);
+      this.router.navigate([
+        '/',
+        window.location.hash.replace('/', '').replace('#', ''),
+      ]);
     }
 
     this.displayContentService.displayContentObservable$.subscribe({

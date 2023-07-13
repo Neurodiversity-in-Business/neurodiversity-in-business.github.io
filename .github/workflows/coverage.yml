@@ -1,7 +1,7 @@
 name: Coverage Report
 on:
   push:
-    branches: ["feature/*","bugfix/*","enhancement/*","maintenance/*"]
+    branches: ["feature/*", "bugfix/*", "enhancement/*", "maintenance/*"]
 permissions:
   contents: write
 jobs:
