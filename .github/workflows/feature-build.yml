@@ -33,3 +33,7 @@ jobs:
         with:
           name: Coverage Report
           path: coverage/neurodiversity-main/
+      - uses: actions/download-artifact@master
+        with:
+          name: Coverage Report
+          path: .
