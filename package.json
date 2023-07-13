@@ -14,13 +14,13 @@
     "deploy": "gh-pages -d build",
     "test": "ng test --watch false",
     "coverage": "ng test --no-watch --code-coverage",
-    "e2e": "nightwatch -c nightwatch.conf.js",
-    "e2e:firefox": "nightwatch -c nightwatch.conf.js -e firefox",
-    "e2e:safari": "nightwatch -c nightwatch.conf.js -e safari",
-    "e2e:edge": "nightwatch -c nightwatch.conf.js -e edge",   
-    "e2e:chrome": "nightwatch -c nightwatch.conf.js -e chrome",   
+    "e2e": "nightwatch --reporter=json  -o tests_output -c nightwatch.conf.js",
+    "e2e:firefox": "nightwatch -r integration-testing/html-reporter.js -o tests_output -c nightwatch.conf.js -e firefox",
+    "e2e:safari": "nightwatch -r integration-testing/html-reporter.js -o tests_output -c nightwatch.conf.js -e safari",
+    "e2e:edge": "nightwatch  -r integration-testing/html-reporter.js -o tests_output nightwatch.conf.js -e edge",
+    "e2e:chrome": "nightwatch  -r integration-testing/html-reporter.js -o tests_output nightwatch.conf.js -e chrome",
     "dockerBuild": "docker build -f Dockerfile -t neurodiversity-main .",
-    "dockerRun": "docker run  --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --env=NODE_VERSION=14.21.3 --env=YARN_VERSION=1.22.19 --workdir=/ -p 8080:8080 --runtime=runc -d neurodiversity-main:latest"
+    "dockerRun": "docker run  --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --workdir=/ -p 8080:8080 --runtime=runc -d neurodiversity-main:latest"
   },
   "private": false,
   "dependencies": {
@@ -67,8 +67,10 @@
     "cucumber": "^6.0.7",
     "cucumber-html-reporter": "^7.1.1",
     "cucumber-pretty": "^6.0.1",
+    "fs": "^0.0.1-security",
     "geckodriver": "^4.0.4",
     "gh-pages": "^5.0.0",
+    "handlebars": "^4.7.7",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
@@ -77,6 +79,7 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "nightwatch": "^3.0.1",
     "nightwatch-html-reporter": "^2.0.6",
+    "path": "^0.12.7",
     "ts-node": "^10.9.1",
     "tslib": "^2.6.0",
     "typescript": "^5.1.6"

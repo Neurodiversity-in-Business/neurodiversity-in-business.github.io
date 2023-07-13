@@ -6,7 +6,8 @@
 /tmp
 /out-tsc
 /bazel-out
-/tests_output
+/integration-testing/tests_output
+.env
 
 # Node
 /node_modules
