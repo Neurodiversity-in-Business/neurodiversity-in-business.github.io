@@ -19,7 +19,6 @@ h2 {
 .card {
   width: 18rem;
   height: 18rem;
-  margin: 10px;
   background-color: purple;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -30,4 +29,9 @@ h2 {
 
 .card-title {
   font-size: 26px;
+}
+
+.blurbs {
+  text-align: center;
+  font-weight: bold;
 }
