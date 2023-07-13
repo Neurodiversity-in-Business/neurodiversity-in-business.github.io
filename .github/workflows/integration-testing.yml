@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Integration Testing
 
 on:
   pull_request:
