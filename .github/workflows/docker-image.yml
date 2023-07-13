@@ -1,10 +1,8 @@
 name: Docker Image CI
 
 on:
-  push:
-    branches: ["development"]
   pull_request:
-    branches: ["development"]
+    branches: ["staging"]
 
 jobs:
   build:
@@ -21,4 +19,5 @@ jobs:
           npm install
           npm run-script build
           docker build -f Dockerfile -t neurodiversity-main .
-          
+          docker run  --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --workdir=/ -p 8080:8080 --runtime=runc -d neurodiversity-main:latest
+          npm e2e
