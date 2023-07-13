@@ -18,6 +18,7 @@
     "e2e:firefox": "nightwatch -c nightwatch.conf.js -e firefox",
     "e2e:safari": "nightwatch -c nightwatch.conf.js -e safari",
     "e2e:edge": "nightwatch -c nightwatch.conf.js -e edge",   
+    "e2e:chrome": "nightwatch -c nightwatch.conf.js -e chrome",   
     "dockerBuild": "docker build -f Dockerfile -t neurodiversity-main .",
     "dockerRun": "docker run  --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --env=NODE_VERSION=14.21.3 --env=YARN_VERSION=1.22.19 --workdir=/ -p 8080:8080 --runtime=runc -d neurodiversity-main:latest"
   },
