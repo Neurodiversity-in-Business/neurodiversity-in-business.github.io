@@ -14,10 +14,10 @@
 module.exports = {
   // An array of folders (excluding subfolders) where your tests are located;
   // if this is not specified, the test source must be passed as the second argument to the test runner.
-  src_folders: ["integraton-testing"],
+  src_folders: ["integration-testing"],
 
   // See https://nightwatchjs.org/guide/concepts/page-object-model.html
-  page_objects_path: ["integraton-testing/pages"],
+  page_objects_path: ["integration-testing/pages"],
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/adding-custom-commands.html
   custom_commands_path: [],
@@ -68,11 +68,11 @@ module.exports = {
         // For more info on using CucumberJS with Nightwatch, visit:
         // https://nightwatchjs.org/guide/writing-tests/using-cucumberjs.html
         type: "cucumber",
-        src_folders: ["integraton-testing/step_definitions"],
+        src_folders: ["integration-testing/step_definitions"],
         // define cucumber specific options
         options: {
           //set the feature path
-          feature_path: "integraton-testing/features",
+          feature_path: "integration-testing/features",
 
           // start the webdriver session automatically (enabled by default)
           // auto_start_session: true
