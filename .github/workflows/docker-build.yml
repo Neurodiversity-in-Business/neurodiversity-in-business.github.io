@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Integration Testing
 
 on:
   pull_request:
@@ -20,4 +20,4 @@ jobs:
           npm run-script build
           docker build -f Dockerfile -t neurodiversity-main .
           docker run  --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --workdir=/ -p 8080:8080 --runtime=runc -d neurodiversity-main:latest
-          npm e2e
+          npm run e2e
