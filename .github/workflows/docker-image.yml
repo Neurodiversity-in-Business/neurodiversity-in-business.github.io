@@ -20,4 +20,7 @@ jobs:
           npm install -g @angular/cli
           npm install
           npm run-script build
-          docker build . --file Dockerfile --tag neurodiversity-main:$(date +%s)
+          docker build -f Dockerfile -t neurodiversity-main .
+          docker run  --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --env=NODE_VERSION=14.21.3 --env=YARN_VERSION=1.22.19 --workdir=/ -p 8080:8080 --runtime=runc -d neurodiversity-main:latest
+          npm run e2e
+          
