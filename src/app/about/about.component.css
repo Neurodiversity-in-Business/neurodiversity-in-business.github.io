@@ -1,0 +1,33 @@
+h1,
+h2 {
+  font-family: "Montserrat", Sans-serif;
+  font-weight: bold;
+  background: turquoise;
+  color: white;
+  font-style: bold;
+  text-align: left;
+  padding: 40px;
+}
+
+.card-title,
+.card-text {
+  text-align: center;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.card {
+  width: 18rem;
+  height: 18rem;
+  margin: 10px;
+  background-color: purple;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card:hover {
+  background-color: magenta;
+}
+
+.card-title {
+  font-size: 26px;
+}
