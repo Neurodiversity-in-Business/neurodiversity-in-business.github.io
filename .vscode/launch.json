@@ -7,29 +7,6 @@
       "request": "launch",
       "url": "http://localhost:8080/#",
       "webRoot": "${workspaceFolder}"
-    },
-    {
-      "name": "Attach Chrome",
-      "type": "chrome",
-      "request": "attach",
-      "url": "http://localhost:4200/#",
-      "webRoot": "${workspaceFolder}"
-    },
-    {
-      "name": "Launch Chrome (Test)",
-      "type": "chrome",
-      "request": "launch",
-      "preLaunchTask": "npm: build",
-      "url": "http://localhost:9876/debug.html",
-      "webRoot": "${workspaceFolder}"
-    },
-    {
-      "name": "Launch Chrome (E2E)",
-      "type": "node",
-      "request": "launch",
-      "program": "${workspaceFolder}/node_modules/protractor/bin/protractor",
-      "protocol": "inspector",
-      "args": ["${workspaceFolder}/protractor.conf.js"]
     }
   ]
 }
