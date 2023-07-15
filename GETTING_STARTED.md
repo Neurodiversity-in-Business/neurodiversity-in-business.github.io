@@ -24,10 +24,17 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 # Running end-to-end tests
+Make sure that you have build the application docker image running via
+
+`npm run dockerBuild`
+
+and then,
+
+`npm run dockerRun `
+
+which will make the application available locally through http://localhost:8080
 
 Then run `npm run-script e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-You will also need the image running on port 8080.
 
 # Further help
 
