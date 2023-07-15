@@ -56,3 +56,13 @@ button {
 button:hover {
   transform: scale(0.95);
 }
+
+.buttonBlurb {
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+}
+.buttonBlurb.btn-holder {
+  justify-content: flex-end;
+  display: flex;
+}
