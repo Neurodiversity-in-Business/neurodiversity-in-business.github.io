@@ -1,0 +1,68 @@
+h1,
+h2 {
+  font-family: "Montserrat", Sans-serif;
+  font-weight: bold;
+  background: turquoise;
+  color: white;
+  font-style: bold;
+  text-align: left;
+  padding: 40px;
+}
+
+.card-title,
+.card-text {
+  font-size: 12;
+  text-align: center;
+  color: aliceblue;
+}
+
+.card {
+  width: 18rem;
+  height: 18rem;
+  background-color: purple;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card:hover {
+  background-color: magenta;
+}
+
+.card-title {
+  font-size: 20px;
+}
+
+.blurbs {
+  text-align: center;
+  font-weight: bold;
+}
+button {
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  width: auto;
+  font-size: 16px;
+  padding: 15px 30px;
+  border-radius: 4px;
+  transform: 0.5s;
+  font-family: "Montserrat", Sans-serif;
+  font-weight: 500;
+  fill: #ffffff;
+  color: #ffffff;
+  background-color: #66980c;
+  border: none;
+}
+
+button:hover {
+  transform: scale(0.95);
+}
+
+.buttonBlurb {
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+}
+.buttonBlurb.btn-holder {
+  justify-content: flex-end;
+  display: flex;
+}
