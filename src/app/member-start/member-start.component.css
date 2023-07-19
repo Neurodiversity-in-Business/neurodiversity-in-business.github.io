@@ -2,7 +2,7 @@ h1,
 h2 {
   font-family: "Montserrat", Sans-serif;
   font-weight: bold;
-  background: turquoise;
+  background: #07a797;
   color: white;
   font-style: bold;
   text-align: left;
@@ -12,13 +12,12 @@ h2 {
 .card-title,
 .card-text {
   font-size: 12;
-  text-align: center;
+  text-align: justify;
   color: aliceblue;
 }
 
 .card {
-  width: 18rem;
-  height: 18rem;
+
   background-color: purple;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -32,7 +31,7 @@ h2 {
 }
 
 .blurbs {
-  text-align: center;
+  text-align: left;
   font-weight: bold;
 }
 button {
@@ -49,7 +48,7 @@ button {
   font-weight: 500;
   fill: #ffffff;
   color: #ffffff;
-  background-color: #66980c;
+  background-color: #528400;
   border: none;
 }
 
@@ -65,4 +64,7 @@ button:hover {
 .buttonBlurb.btn-holder {
   justify-content: flex-end;
   display: flex;
+}
+.inner-text {
+  text-align: left;
 }
