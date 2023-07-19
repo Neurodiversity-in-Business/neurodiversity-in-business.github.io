@@ -5,7 +5,7 @@
 }
 
 #introText {
-  text-align: center;
+  text-align: left;
 }
 
 h1,
@@ -19,10 +19,12 @@ h2 {
   padding: 40px;
 }
 
-.blurbs {
+
+h3 {
   text-align: center;
 }
 
 .blurbs {
-  text-align: center;
+  text-align: left;
 }
+
