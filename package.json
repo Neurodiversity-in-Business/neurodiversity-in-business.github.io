@@ -46,6 +46,7 @@
     "express-rate-limit": "^6.7.0",
     "express.js": "^1.0.0",
     "jquery": "^3.7.0",
+    "ng2-pdf-viewer": "^9.1.5",
     "rxjs": "~7.5.0",
     "zone.js": "~0.13.1"
   },
