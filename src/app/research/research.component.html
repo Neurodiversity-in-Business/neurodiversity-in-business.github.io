@@ -1,1 +1,42 @@
-<p>Coming Soon!</p>
+<div class="container-fluid">
+  <div class="row">
+    <h1 id="pageHeader">NiB Research</h1>
+  </div>
+  <p>
+    Neurodiversity in Business has supported over 500 of the world’s leading
+    organisations to develop, improve and share practices and initiatives to
+    support neuroinclusion in the workplace.
+  </p>
+  <p>
+    Neurodiversity in Business is proud to partner with Birkbeck, University of
+    London to embark on this journey to undertake and promote this best in class
+    research of current neurodiversity practice. We sincerely thank our sponsors
+    Sage, McDonalds and Rolls Royce for their generous support.
+  </p>
+  <p>
+    Please view our research paper below or download here:
+    <a
+      target="_blank"
+      href="../../assets/Neurodiversity-in-Business-report_FV_Digital.pdf"
+      >Neurodiversity in Business report_FV_Digital</a
+    >
+  </p>
+
+  <br />
+
+  <div class="container">
+    <div class="row">
+      <div class="w-100">
+        <pdf-viewer
+          style="width: 75vw; height: 800px"
+          [src]="
+            '../../assets/Neurodiversity-in-Business-report_FV_Digital.pdf'
+          "
+          [render-text]="true"
+          [original-size]="false"
+        ></pdf-viewer>
+      </div>
+    </div>
+  </div>
+  <br/>
+</div>

@@ -25,6 +25,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 import { SlaveryPolicyComponent } from './slavery-policy/slavery-policy.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     NgbModule,
     FontAwesomeModule,
     NgbCarouselModule,
+    PdfViewerModule,
   ],
   exports: [],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
