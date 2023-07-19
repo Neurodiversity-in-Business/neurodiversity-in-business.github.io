@@ -9,6 +9,10 @@ h2 {
   padding: 40px;
 }
 
+h3 {
+  text-align: center;
+}
+
 .card-title,
 .card-text {
   font-size: 12;
@@ -60,8 +64,8 @@ button:hover {
   flex-direction: column;
   display: flex;
 }
-.buttonBlurb.btn-holder {
-  justify-content: flex-end;
+.btn-holder {
+  justify-content:center;
   display: flex;
 }
 .inner-text {
