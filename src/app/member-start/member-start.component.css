@@ -12,7 +12,7 @@ h2 {
 .card-title,
 .card-text {
   font-size: 12;
-  text-align: justify;
+  text-align: left;
   color: aliceblue;
 }
 
