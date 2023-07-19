@@ -13,7 +13,6 @@ h3 {
   text-align: center;
 }
 
-.card-title,
 .card-text {
   font-size: 12;
   text-align: left;
@@ -31,6 +30,8 @@ h3 {
 
 .card-title {
   font-size: 20px;
+  text-align: left;
+  color: aliceblue;
 }
 
 .blurbs {
@@ -65,7 +66,7 @@ button:hover {
   display: flex;
 }
 .btn-holder {
-  justify-content:center;
+  justify-content: center;
   display: flex;
 }
 .inner-text {

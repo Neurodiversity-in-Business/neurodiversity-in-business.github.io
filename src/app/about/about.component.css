@@ -16,6 +16,7 @@ h3 {
 .card-title {
   text-align: center;
   color: aliceblue;
+  font-size: 26px;
   font-weight: bold;
 }
 .card-text {
@@ -33,14 +34,6 @@ h3 {
 
 .card:hover {
   background-color: magenta;
-}
-
-.card-title {
-  font-size: 26px;
-}
-
-.card-text {
-  text-align:left;
 }
 
 .blurbs {

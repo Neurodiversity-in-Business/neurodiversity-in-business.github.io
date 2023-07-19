@@ -13,36 +13,6 @@ h3 {
   text-align: center;
 }
 
-.card-title {
-  text-align: center;
-  color: aliceblue;
-  font-weight: bold;
-}
-.card-text {
-  text-align: left;
-  color: aliceblue;
-  font-weight: bold;
-}
-
-.card {
-  width: 18rem;
-  height: 18rem;
-  background-color: purple;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.card:hover {
-  background-color: magenta;
-}
-
-.card-title {
-  font-size: 26px;
-}
-
-.card-text {
-  text-align:left;
-}
-
 .blurbs {
   justify-content: space-between;
   flex-direction: column;

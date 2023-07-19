@@ -2,7 +2,8 @@ name: Integration Testing
 
 on:
   pull_request:
-    branches: ["staging","development","feature/*","maintenance/*","bugfix/*"]
+    branches:
+      ["staging", "development", "feature/*", "maintenance/*", "bugfix/*"]
 
 jobs:
   build:
