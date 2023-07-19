@@ -2,16 +2,24 @@ h1,
 h2 {
   font-family: "Montserrat", Sans-serif;
   font-weight: bold;
-  background: turquoise;
+  background: #07a797;
   color: white;
   font-style: bold;
   text-align: left;
   padding: 40px;
 }
 
-.card-title,
-.card-text {
+h3 {
   text-align: center;
+}
+
+.card-title {
+  text-align: center;
+  color: aliceblue;
+  font-weight: bold;
+}
+.card-text {
+  text-align: left;
   color: aliceblue;
   font-weight: bold;
 }
@@ -31,7 +39,12 @@ h2 {
   font-size: 26px;
 }
 
+.card-text {
+  text-align:left;
+}
+
 .blurbs {
-  text-align: center;
-  font-weight: bold;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
 }

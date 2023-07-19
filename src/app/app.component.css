@@ -1,5 +1,9 @@
 ul {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  justify-content: flex-end;
 }
 
 li {

@@ -15,12 +15,8 @@
           width="88"
           height="88"
         ></object>
-        <h3>Community Partners</h3>
-        <p>
-          Community Partners For organisations who are ND Specialists (provide
-          an ND related service), advocacy groups or charities
-        </p>
       </div>
+
       <div class="col">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -37,12 +33,8 @@
             d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1Zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3V1Z"
           />
         </svg>
-        <h3>Corporates</h3>
-        <p>
-          Businesses or corporations who want to focus on building
-          neuroinclusive workplaces inside their own business
-        </p>
       </div>
+
       <div class="col">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -56,23 +48,41 @@
             d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
           />
         </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="text-align: center">
+    <div class="row">
+      <div class="col buttonBlurb">
+        <h3>Community Partners</h3>
+        <p class="inner-text">
+          Community Partners For organisations who are ND Specialists (provide
+          an ND related service), advocacy groups or charities
+        </p>
+        <p class="btn-holder">
+          <button (click)="navigateToForm('member')">Find out More</button>
+        </p>
+      </div>
+      <div class="col buttonBlurb">
+        <h3>Corporates</h3>
+        <p class="inner-text">
+          Businesses or corporations who want to focus on building
+          neuroinclusive workplaces inside their own business
+        </p>
+        <p class="btn-holder">
+          <button (click)="navigateToForm('corp')">Find out More</button>
+        </p>
+      </div>
+      <div class="col buttonBlurb">
         <h3>Individual</h3>
-        <p>
+        <p class="inner-text">
           For individuals in the ND community who are not representing a
           corporate or a community partner
         </p>
-      </div>
-
-      <div class="row">
-        <div class="col">
-          <button (click)="navigateToForm('member')">Find out More</button>
-        </div>
-        <div class="col">
-          <button (click)="navigateToForm('corp')">Find out More</button>
-        </div>
-        <div class="col">
+        <p class="btn-holder">
           <button (click)="navigateToForm('individual')">Find out More</button>
-        </div>
+        </p>
       </div>
     </div>
   </div>
@@ -142,36 +152,33 @@
 
 <div class="container-fluid">
   <div class="row">
-    <h2>Membership Zone</h2>
+    <h2>Resources</h2>
   </div>
 
   <div class="container" style="text-align: center">
     <div class="row">
-      <div class="col">
+      <div class="col buttonBlurb">
         <h3>Resources and Learning Materials</h3>
-        <p>
+        <p class="inner-text">
           Here we upload all learning materials that NiB and our member
           organisations have created to help build a better understanding for
           creating an ND friendly workspace
         </p>
+        <p class="col btn-holder">
+          <button (click)="navigateToHub()">Resource Hub</button>
+        </p>
       </div>
-      <div class="col">
+      <div class="col buttonBlurb">
         <h3>Events</h3>
-        <p>
+        <p class="inner-text">
           Here you will find all information you need to learn about the events,
           courses and meet-ups NiB plans to host in the future.
         </p>
+        <p class="col btn-holder">
+          <button (click)="navigateToEvents()">Events</button>
+        </p>
       </div>
     </div>
-    <div class="row">
-        <div class="col">
-          <button (click)="navigateToHub()">Resource Hub</button>
-        </div>
-        <div class="col">
-          <button (click)="navigateToEvents()">Events</button>
-        </div>
-      </div>
   </div>
-
 </div>
 <br />
