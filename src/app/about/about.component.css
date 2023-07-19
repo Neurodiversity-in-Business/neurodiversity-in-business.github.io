@@ -36,12 +36,6 @@ h3 {
   background-color: magenta;
 }
 
-.card-title {
-}
-
-.card-text {
-}
-
 .blurbs {
   justify-content: space-between;
   flex-direction: column;
