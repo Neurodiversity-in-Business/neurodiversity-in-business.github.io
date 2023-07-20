@@ -5,6 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { Router } from '@angular/router';
 import { DisplayContentService } from './display-content.service';
 
 @Component({
@@ -24,6 +25,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     private displayContentService: DisplayContentService,
     private router: Router
   ) {}
+  
   ngOnInit() {
     if (window.innerWidth <= 991) {
       this.isMobileLayout = true;
@@ -65,8 +67,3 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 }
-import fontawesome from '@fortawesome/fontawesome';
-import brands from '@fortawesome/fontawesome-free-brands';
-import { NavigationStart, Router } from '@angular/router';
-
-fontawesome.library.add(brands);
