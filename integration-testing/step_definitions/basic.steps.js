@@ -1,5 +1,5 @@
 // Import the cucumber operators we need
-const { Before, Given, Then } = require("@cucumber/cucumber");
+const { Before, Given, Then, When } = require("@cucumber/cucumber");
 const { HomePage } = require("../pages/home.po");
 var chai = require("chai");
 var expect = chai.expect;
@@ -16,19 +16,21 @@ Before(function (scenario, callback) {
 });
 
 Given("I go to {string}", function (string) {
-  this.homepage.navigateToHome();
-  browser.pause(3000);
+  return this.homepage.navigateTo(string);
 });
-Then("I click on the Skip to Content link", function () {
+
+When('I click on the Skip to Content link', function () {
   browser.perform(function () {
     const actions = this.actions();
-    actions.click("#skipLink").pause(1000);
-    browser
-      .waitForElementPresent("#pageHeader")
-      .element("#pageHeader")
-      .expect.isSelected();
+    actions.click("#skipLink");
   });
 });
+
 Then("the first header has focus", async function () {
-  return browser.pause(1000).end();
+  browser.perform(function () {
+    return  this.waitForElementPresent("#pageHeader")
+      .element("#pageHeader")
+      .expect.isSelected();
+
+  });
 });
