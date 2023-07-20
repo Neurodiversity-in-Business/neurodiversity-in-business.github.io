@@ -1,12 +1,6 @@
 // Import the cucumber operators we need
 const { Before, Given, Then, When } = require("@cucumber/cucumber");
 const { HomePage } = require("../pages/home.po");
-var chai = require("chai");
-var expect = chai.expect;
-
-var chaiAsPromised = require("chai-as-promised");
-const { assert } = require("console");
-chai.use(chaiAsPromised);
 
 var expect = chai.expect;
 Before(function (scenario, callback) {

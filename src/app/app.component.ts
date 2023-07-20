@@ -5,6 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { Router } from '@angular/router';
 import { DisplayContentService } from './display-content.service';
 
 @Component({
@@ -13,10 +14,28 @@ import { DisplayContentService } from './display-content.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit, AfterViewInit {
+  @ViewChild('nav') nav: ElementRef;
+  title = 'Neurodiversity in Business';
+  navActiveId = 1;
+  isContentShown = true;
+  isMenuCollapsed = window.innerWidth <= 991;
+  public isMobileLayout = false;
+
   constructor(
     private displayContentService: DisplayContentService,
     private router: Router
   ) {}
+  
+  ngOnInit() {
+    if (window.innerWidth <= 991) {
+      this.isMobileLayout = true;
+    }
+    window.onresize = () => {
+      this.isMobileLayout = window.innerWidth <= 991;
+      this.isMenuCollapsed = this.isMobileLayout;
+    };
+  }
+
   ngAfterViewInit(): void {
     let this$ = this;
 
@@ -39,21 +58,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       },
     });
   }
-  @ViewChild('nav') nav: ElementRef;
-  title = 'Neurodiversity in Business';
-  navActiveId = 1;
-  isContentShown = true;
-  isMenuCollapsed = window.innerWidth <= 991;
-  public isMobileLayout = false;
-  ngOnInit() {
-    if (window.innerWidth <= 991) {
-      this.isMobileLayout = true;
-    }
-    window.onresize = () => {
-      this.isMobileLayout = window.innerWidth <= 991;
-      this.isMenuCollapsed = this.isMobileLayout;
-    };
-  }
+
   toggleContent(flag: string) {
     if (flag == 'hide') {
       this.isContentShown = false;
@@ -62,8 +67,3 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 }
-import fontawesome from '@fortawesome/fontawesome';
-import brands from '@fortawesome/fontawesome-free-brands';
-import { NavigationStart, Router } from '@angular/router';
-
-fontawesome.library.add(brands);
