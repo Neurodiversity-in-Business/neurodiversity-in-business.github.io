@@ -54,8 +54,6 @@
     "@types/cucumber": "^6.0.1",
     "@types/jasmine": "~4.0.0",
     "@types/node": "^20.4.1",
-    "chai": "^4.3.7",
-    "chai-as-promised": "^7.1.1",
     "chromedriver": "^114.0.2",
     "cucumber": "^6.0.7",
     "cucumber-html-reporter": "^7.1.1",
