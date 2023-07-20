@@ -60,7 +60,7 @@ button:hover {
   transform: scale(0.95);
 }
 
-.buttonBlurb {
+.button-blurb {
   justify-content: space-between;
   flex-direction: column;
   display: flex;

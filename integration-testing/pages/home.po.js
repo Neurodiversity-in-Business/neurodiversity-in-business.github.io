@@ -1,6 +1,6 @@
 var HomePage = function () {
-  this.navigateToHome = () => {
-    browser.navigateTo("http://localhost:8080");
+  this.navigateTo = (urlString) => {
+    browser.navigateTo(urlString);
   };
 };
 
