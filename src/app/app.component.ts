@@ -25,7 +25,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     private displayContentService: DisplayContentService,
     private router: Router
   ) {}
-  
+
   ngOnInit() {
     if (window.innerWidth <= 991) {
       this.isMobileLayout = true;
