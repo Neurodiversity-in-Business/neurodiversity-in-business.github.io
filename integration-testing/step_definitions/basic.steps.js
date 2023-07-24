@@ -2,7 +2,6 @@
 const { Before, Given, Then, When } = require("@cucumber/cucumber");
 const { HomePage } = require("../pages/home.po");
 
-var expect = chai.expect;
 Before(function (scenario, callback) {
   this.homepage = new HomePage();
 
