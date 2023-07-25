@@ -71,3 +71,13 @@ button {
 .navigation button {
   font-weight: bold;
 }
+
+.login-button {
+  color: white;
+  font-weight: bold;
+}
+
+.logout-button {
+  color: white;
+  font-weight: bold;
+}
