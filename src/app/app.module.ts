@@ -19,6 +19,82 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 import { SlaveryPolicyComponent } from './slavery-policy/slavery-policy.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import {
+  MsalInterceptorConfiguration,
+  MsalGuardConfiguration,
+  MsalModule,
+  MSAL_GUARD_CONFIG,
+  MSAL_INSTANCE,
+  MSAL_INTERCEPTOR_CONFIG,
+  MsalBroadcastService,
+  MsalGuard,
+  MsalInterceptor,
+  MsalService,
+  MsalRedirectComponent,
+} from '@azure/msal-angular';
+import {
+  LogLevel,
+  IPublicClientApplication,
+  PublicClientApplication,
+  BrowserCacheLocation,
+  InteractionType,
+} from '@azure/msal-browser';
+import { environment } from 'src/environments/environment';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
+const isIE =
+  window.navigator.userAgent.indexOf('MSIE ') > -1 ||
+  window.navigator.userAgent.indexOf('Trident/') > -1; // Remove this line to use Angular Universal
+
+export function loggerCallback(logLevel: LogLevel, message: string) {
+  console.log(message);
+}
+
+export function MSALInstanceFactory(): IPublicClientApplication {
+  return new PublicClientApplication({
+    auth: {
+      clientId: environment.msalConfig.auth.clientId,
+      authority: environment.msalConfig.auth.authority,
+      redirectUri: '/',
+      postLogoutRedirectUri: '/',
+    },
+    cache: {
+      cacheLocation: BrowserCacheLocation.LocalStorage,
+      storeAuthStateInCookie: isIE, // set to true for IE 11. Remove this line to use Angular Universal
+    },
+    system: {
+      allowNativeBroker: false, // Disables WAM Broker
+      loggerOptions: {
+        loggerCallback,
+        logLevel: LogLevel.Info,
+        piiLoggingEnabled: false,
+      },
+    },
+  });
+}
+
+export function MSALInterceptorConfigFactory(): MsalInterceptorConfiguration {
+  const protectedResourceMap = new Map<string, Array<string>>();
+  protectedResourceMap.set(
+    environment.apiConfig.uri,
+    environment.apiConfig.scopes
+  );
+
+  return {
+    interactionType: InteractionType.Redirect,
+    protectedResourceMap,
+  };
+}
+
+export function MSALGuardConfigFactory(): MsalGuardConfiguration {
+  return {
+    interactionType: InteractionType.Redirect,
+    authRequest: {
+      scopes: [...environment.apiConfig.scopes],
+    },
+    loginFailedRoute: '/login-failed',
+  };
+}
 
 @NgModule({
   declarations: [
@@ -41,9 +117,32 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     NgbModule,
     NgbCarouselModule,
     PdfViewerModule,
+    MsalModule,
   ],
   exports: [],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
-  bootstrap: [AppComponent],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MsalInterceptor,
+      multi: true,
+    },
+    {
+      provide: MSAL_INSTANCE,
+      useFactory: MSALInstanceFactory,
+    },
+    {
+      provide: MSAL_GUARD_CONFIG,
+      useFactory: MSALGuardConfigFactory,
+    },
+    {
+      provide: MSAL_INTERCEPTOR_CONFIG,
+      useFactory: MSALInterceptorConfigFactory,
+    },
+    MsalService,
+    MsalGuard,
+    MsalBroadcastService,
+  ],
+  bootstrap: [AppComponent, MsalRedirectComponent],
 })
 export class AppModule {}
