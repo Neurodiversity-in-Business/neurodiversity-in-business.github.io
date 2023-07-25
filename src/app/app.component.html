@@ -27,7 +27,28 @@
           alt="Neurodiversity in Buisness Logo"
         />
       </div>
+
       <div class="col" style="text-align: right">
+        <div>
+          <button
+            class="login-button btn btn-primary"
+            *ngIf="!loginDisplay"
+            (click)="loginRedirect()"
+          >
+            Login
+          </button>
+          <p *ngIf="loginDisplay">
+            Welcome {{ username }}
+            <button
+              class="logout-button btn btn-secondary"
+              *ngIf="loginDisplay"
+              (click)="logout()"
+            >
+              Logout
+            </button>
+          </p>
+        </div>
+        <br /><br />
         <div [(ngbCollapse)]="isMenuCollapsed" class="collapse navbar-collapse">
           <ul
             [keyboard]="true"

@@ -6,19 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./member-start.component.css'],
 })
 export class MemberStartComponent {
+  showContent: boolean = true;
+  showOrgForm: boolean = false;
+  showCorpForm: boolean = false;
+  showIndividualForm: boolean = false;
   navigateToForm(locationName: string) {
     switch (locationName) {
       case 'member':
-        location.href =
-          'https://neurodiversityinbusiness.org/partner-member-signup/';
+        this.showContent = false;
+        this.showOrgForm = true;
         break;
       case 'corp':
-        location.href =
-          'https://neurodiversityinbusiness.org/corporate-member-signup/';
+        this.showContent = false;
+        this.showCorpForm = true;
         break;
       case 'individual':
-        location.href =
-          'https://neurodiversityinbusiness.org/individual-member-signup/';
+        this.showContent = false;
+        this.showIndividualForm = true;
         break;
     }
   }
