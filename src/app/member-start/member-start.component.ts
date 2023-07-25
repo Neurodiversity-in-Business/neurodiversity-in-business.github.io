@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./member-start.component.css'],
 })
 export class MemberStartComponent {
-  showContent:boolean = true;
-  showOrgForm:boolean = false;
-  showCorpForm:boolean = false;
-  showIndividualForm:boolean = false;
+  showContent: boolean = true;
+  showOrgForm: boolean = false;
+  showCorpForm: boolean = false;
+  showIndividualForm: boolean = false;
   navigateToForm(locationName: string) {
     switch (locationName) {
       case 'member':
