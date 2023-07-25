@@ -9,6 +9,6 @@ export const environment = {
   },
   apiConfig: {
     scopes: ['user.read'],
-    uri: 'https://neurodiversity-in-buisness.github.io',
+    uri: 'https://neurodiversity-in-business.github.io',
   },
 };
