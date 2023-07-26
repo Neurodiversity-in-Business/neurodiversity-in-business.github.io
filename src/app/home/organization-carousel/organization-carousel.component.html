@@ -1,0 +1,20 @@
+<ngb-carousel
+  *ngIf="carouselData.items"
+  [showNavigationArrows]="false"
+  [showNavigationIndicators]="false"
+>
+  <ng-template ngbSlide *ngFor="let item of carouselData.items; let i = index">
+    <div class="carousel-item active" style="display: flex; justify-content: center;">
+      <img
+      style="height:150px; max-width: min-content; padding-bottom: 25px; padding-right: 35px; padding-left: 35px;"
+        class="d-block w-100"
+        src="{{
+          '../../../assets/organization-carousel-assets/' +
+            carouselData.directory +
+            '/' +
+            item.sourceImageString
+        }}"
+      />
+    </div>
+  </ng-template>
+</ngb-carousel>

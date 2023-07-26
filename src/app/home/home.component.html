@@ -2,7 +2,6 @@
   <div class="row">
     <h1 id="pageHeader">Neurodiversity in Business (NiB)</h1>
   </div>
-
   <div class="row">
     <div class="col">
       <p id="introText">
@@ -20,12 +19,24 @@
     </div>
   </div>
 </div>
-
-<!--
-<app-company-logos-carosel></app-company-logos-carosel
-<app-community-logos-carosel></app-community-logos-carosel>
--->
-
+<br />
+<div class="container-fluid">
+  <div class="row">
+    <div class="col carousel-column">
+      <h3>A small selection of our corporate members.</h3>
+      <app-organization-carousel
+        [carouselDataObservable]="companyCarouselDataObservable"
+      ></app-organization-carousel>
+    </div>
+    <div class="col carousel-column">
+      <h3>NiB's Community Partners.</h3>
+      <app-organization-carousel
+        [carouselDataObservable]="partnerCarouselDataObservable"
+      ></app-organization-carousel>
+    </div>
+  </div>
+</div>
+<br />
 <div class="container-fluid">
   <i class="fas fa-quote-left fa-xs text-primary"></i>
   <div class="row">

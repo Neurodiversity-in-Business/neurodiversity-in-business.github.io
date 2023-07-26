@@ -37,7 +37,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   isContentShown = true;
   isMenuCollapsed = window.innerWidth <= 991;
   loginDisplay = false;
-  username = "";
+  username = '';
   private readonly _destroying$ = new Subject<void>();
 
   public isMobileLayout = false;
@@ -61,8 +61,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     this.setLoginDisplay();
     this.authService.handleRedirectObservable().subscribe((res) => {
       this.isContentShown = true;
-      this.username  =  this.authService.instance.getActiveAccount()?.name!;
-      console.log(res);
+      this.username = this.authService.instance.getActiveAccount()?.name!;
     });
 
     this.authService.instance.enableAccountStorageEvents(); // Optional - This will enable ACCOUNT_ADDED and ACCOUNT_REMOVED events emitted when a user logs in or out of another tab or window

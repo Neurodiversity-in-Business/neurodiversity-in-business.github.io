@@ -41,13 +41,13 @@ import {
 } from '@azure/msal-browser';
 import { environment } from 'src/environments/environment';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { OrganizationCarouselComponent } from './home/organization-carousel/organization-carousel.component';
 
 const isIE =
   window.navigator.userAgent.indexOf('MSIE ') > -1 ||
   window.navigator.userAgent.indexOf('Trident/') > -1; // Remove this line to use Angular Universal
 
 export function loggerCallback(logLevel: LogLevel, message: string) {
-  console.log(message);
 }
 
 export function MSALInstanceFactory(): IPublicClientApplication {
@@ -110,6 +110,7 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
     PrivacyPolicyComponent,
     CookiePolicyComponent,
     SlaveryPolicyComponent,
+    OrganizationCarouselComponent,
   ],
   imports: [
     BrowserModule,
