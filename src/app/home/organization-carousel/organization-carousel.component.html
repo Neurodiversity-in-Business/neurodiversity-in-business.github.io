@@ -1,0 +1,43 @@
+<div
+  id="{{ 'orgCarousel' + carouselData.directory }}"
+  class="carousel slide"
+  data-ride="carousel"
+>
+  <div
+    class="carousel-inner"
+    *ngFor="let item of carouselData.items; let i = index"
+  >
+    <div class="carousel-item active">
+      <img
+        height="30"
+        class="d-block w-100"
+        src="{{
+          '../../../assets/organization-carousel-assets/' +
+            carouselData.directory +
+            '/' +
+            item.sourceImageString
+        }}"
+        alt="{{ i + 1 }} of {{ carouselData.items.length }}"
+      />
+    </div>
+  </div>
+  <!-- <a
+    class="carousel-control-prev"
+    href="#orgCarousel"
+    role="button"
+    data-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#orgCarousel"
+    role="button"
+    data-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  -->
+</div>
