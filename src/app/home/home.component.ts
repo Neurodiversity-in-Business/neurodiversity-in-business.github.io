@@ -25,6 +25,8 @@ export class HomeComponent implements OnInit {
     corporateData.directory= "corporation";
     corporateData.items = [];
     corporateData.items.push(new CarouselItem('Oracle', 'oracle.svg'));
+    corporateData.items.push(new CarouselItem('Capita', 'capita.svg'));
+    corporateData.items.push(new CarouselItem('Heathrow', 'heathrow.svg'));
 
     this._carouselService.corpSubject.next(corporateData);
     this.carouselIsReady = true;
