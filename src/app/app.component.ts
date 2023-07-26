@@ -7,7 +7,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { DisplayContentService } from './display-content.service';
 import {
   MsalService,
@@ -16,13 +16,12 @@ import {
   MsalGuardConfiguration,
 } from '@azure/msal-angular';
 import {
-  AuthenticationResult,
   InteractionStatus,
-  PopupRequest,
   RedirectRequest,
   EventMessage,
   EventType,
 } from '@azure/msal-browser';
+import { Location } from '@angular/common';
 import { Subject } from 'rxjs/internal/Subject';
 import { filter, takeUntil } from 'rxjs/operators';
 @Component({
@@ -41,14 +40,24 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   private readonly _destroying$ = new Subject<void>();
 
   public isMobileLayout = false;
+  history: string[];
 
   constructor(
     private displayContentService: DisplayContentService,
     private router: Router,
     @Inject(MSAL_GUARD_CONFIG) private msalGuardConfig: MsalGuardConfiguration,
     private authService: MsalService,
-    private msalBroadcastService: MsalBroadcastService
-  ) {}
+    private msalBroadcastService: MsalBroadcastService,
+    private angularLocation: Location
+  ) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (this.history != undefined) {
+          this.history.push(event.urlAfterRedirects);
+        }
+      }
+    });
+  }
 
   ngOnInit() {
     if (window.innerWidth <= 991) {
@@ -62,6 +71,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     this.authService.handleRedirectObservable().subscribe((res) => {
       this.isContentShown = true;
       this.username = this.authService.instance.getActiveAccount()?.name!;
+      console.log(res);
     });
 
     this.authService.instance.enableAccountStorageEvents(); // Optional - This will enable ACCOUNT_ADDED and ACCOUNT_REMOVED events emitted when a user logs in or out of another tab or window
@@ -97,14 +107,13 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     let this$ = this;
 
-    if (window.location.hash != '#/' && window.location.hash.length != 0) {
-      console.log('triggered');
+    if (window.location.hash == '#/' || window.location.hash.length == 0) {
       this.displayContentService.hideContent();
       this.router.navigate([
         '/',
         window.location.hash.replace('/', '').replace('#', ''),
       ]);
-    }
+    } 
 
     this.displayContentService.displayContentObservable$.subscribe({
       next(flag) {
@@ -164,6 +173,14 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       this.isContentShown = false;
     } else {
       this.isContentShown = true;
+    }
+  }
+  back(): void {
+    this.history.pop();
+    if (this.history.length > 0) {
+      this.angularLocation.back();
+    } else {
+      this.router.navigate([this.angularLocation.path()]);
     }
   }
 }
