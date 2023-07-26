@@ -71,6 +71,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     this.authService.handleRedirectObservable().subscribe((res) => {
       this.isContentShown = true;
       this.username = this.authService.instance.getActiveAccount()?.name!;
+      console.log(res);
     });
 
     this.authService.instance.enableAccountStorageEvents(); // Optional - This will enable ACCOUNT_ADDED and ACCOUNT_REMOVED events emitted when a user logs in or out of another tab or window
