@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 import { SlaveryPolicyComponent } from './slavery-policy/slavery-policy.component';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: 'privacy', component: PrivacyPolicyComponent },
