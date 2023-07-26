@@ -1,6 +1,7 @@
 <ngb-carousel
   *ngIf="carouselData.items"
-  [showNavigationArrows]="true"
+  [showNavigationArrows]="false"
+  [showNavigationIndicators]="false"
 >
   <ng-template ngbSlide *ngFor="let item of carouselData.items; let i = index">
     <div class="carousel-item active" style="display: flex; justify-content: center;">
@@ -13,7 +14,6 @@
             '/' +
             item.sourceImageString
         }}"
-        alt="{{ i + 1 }} of {{ carouselData.items.length }}"
       />
     </div>
   </ng-template>
