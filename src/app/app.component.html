@@ -37,16 +37,20 @@
           >
             Login
           </button>
-          <p *ngIf="loginDisplay">
-            Welcome {{ username }}
+
+          <div *ngIf="loginDisplay" ngbDropdown class="d-inline-block">
             <button
-              class="logout-button btn btn-secondary"
-              *ngIf="loginDisplay"
-              (click)="logout()"
+              type="button"
+              ngbDropdownToggle
+              class="btn btn-outline-primary"
+              id="dropdownBasic1"
             >
-              Logout
+              {{ username }}
             </button>
-          </p>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem (click)="logout()">Logout</button>
+            </div>
+          </div>
         </div>
         <br /><br />
         <div [(ngbCollapse)]="isMenuCollapsed" class="collapse navbar-collapse">
