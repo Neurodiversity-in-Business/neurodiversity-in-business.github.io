@@ -4,25 +4,33 @@
 
     <!--JotForms pasted below-->
     <script
-      src="https://cdn02.jotfor.ms/static/prototype.forms.js?3.3.43677"
+      src="https://cdn02.jotfor.ms/static/prototype.forms.js?3.3.43824"
       type="text/javascript"
     ></script>
     <script
-      src="https://cdn03.jotfor.ms/static/jotform.forms.js?3.3.43677"
+      src="https://cdn03.jotfor.ms/static/jotform.forms.js?3.3.43824"
       type="text/javascript"
     ></script>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.js"
     ></script>
-    <script src="https://cdn01.jotfor.ms//js/pen/toMarkdown.js?v=3.3.43677"></script>
-    <script src="https://cdn02.jotfor.ms//js/pen/showdown.js?v=3.3.43677"></script>
+    <script src="https://cdn01.jotfor.ms//js/pen/toMarkdown.js?v=3.3.43824"></script>
+    <script src="https://cdn02.jotfor.ms//js/pen/showdown.js?v=3.3.43824"></script>
     <script
-      src="https://cdn03.jotfor.ms/js/payments/validategateways.js?v=3.3.43677"
+      src="https://cdn03.jotfor.ms/js/payments/validategateways.js?v=3.3.43824"
       type="text/javascript"
     ></script>
     <script
-      src="https://cdn01.jotfor.ms/s/umd/369c903948b/for-form-branding-footer.js?v=3.3.43677"
+      src="https://www.jotform.com/static/encryptedForms.js?3.3.43824"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn01.jotfor.ms/s/umd/6f593234543/for-form-encryption.js?v=3.3.43824"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn01.jotfor.ms/s/umd/6f593234543/for-form-branding-footer.js?v=3.3.43824"
       type="text/javascript"
       defer
     ></script>
@@ -34,6 +42,11 @@
       JotForm.newPaymentUI = true;
       JotForm.clearFieldOnHide = "disable";
       JotForm.submitError = "jumpToFirstError";
+      JotForm.encryptionProtocol = "JF-CSE-V2";
+      JotForm.isEncrypted = true;
+      JotForm.encryptionPublicKey =
+        "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAphAjDx2JO9JEPYclnrjjJ46d7GQ1H1uM1QeXvDzowy2Sd+zg/zVzHcITch0/Tb9aHghPh1Ca8CRFl2+RHy3p/pRaeUZVn6O7sMy1Lk90fPKxflouHFb0InW4oyiD/RmkjznLqrGaEZpAhuHRV6GGTSM8LphX6BkuKBbrmcItm8Wyyhc3OXRFNR94oDslb62b8PfmCgkK3u6VVTiXSauFG4mjS+gZa2tSaNWNtQgA4XTZF1AJLUeDREAQxT7fbgjaKB9E380npLq6iYHwZDsZeClHofBlXWt2+qcrjf0BC04tnXfWBY35W/A2ldHsw1Pqwop/1r/iN+wgz1yK6gVc6QIDAQAB-----END PUBLIC KEY-----";
+      JotForm.setFieldsToPreserve([]);
       window.addEventListener("DOMContentLoaded", function () {
         window.brandingFooter.init({
           formID: 232045653090046,
@@ -43,10 +56,13 @@
         });
       });
       JotForm.init(function () {
-        /*INIT-START*/ JotForm.description(
+        /*INIT-START*/
+        JotForm.description(
           "input_1",
           "Please provide your full name, first and last."
         );
+        $("input_2_confirm").hint("example@example.com");
+        $$("#input_2_confirm")[0].setAttribute("onPaste", "return false;");
         JotForm.description(
           "input_2",
           "Please provide a valid email address we can contact you back with."
@@ -57,8 +73,13 @@
           "input_3",
           "Please provide your reasoning and any references."
         );
-        JotForm.alterTexts({ startButtonText: "START" }); /*INIT-END*/
+        JotForm.alterTexts({ startButtonText: "START" });
+        JotEncrypted.setPublicKey(
+          "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAphAjDx2JO9JEPYclnrjjJ46d7GQ1H1uM1QeXvDzowy2Sd+zg/zVzHcITch0/Tb9aHghPh1Ca8CRFl2+RHy3p/pRaeUZVn6O7sMy1Lk90fPKxflouHFb0InW4oyiD/RmkjznLqrGaEZpAhuHRV6GGTSM8LphX6BkuKBbrmcItm8Wyyhc3OXRFNR94oDslb62b8PfmCgkK3u6VVTiXSauFG4mjS+gZa2tSaNWNtQgA4XTZF1AJLUeDREAQxT7fbgjaKB9E380npLq6iYHwZDsZeClHofBlXWt2+qcrjf0BC04tnXfWBY35W/A2ldHsw1Pqwop/1r/iN+wgz1yK6gVc6QIDAQAB-----END PUBLIC KEY-----"
+        );
+        /*INIT-END*/
       });
+
       setTimeout(function () {
         JotForm.paymentExtrasOnTheFly([
           null,
@@ -110,22 +131,22 @@
     <link
       type="text/css"
       rel="stylesheet"
-      href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.43677"
+      href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.43824"
     />
     <link
       type="text/css"
       rel="stylesheet"
-      href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.43677"
+      href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.43824"
     />
     <link
       type="text/css"
       rel="stylesheet"
-      href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.43677"
+      href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.43824"
     />
     <link
       type="text/css"
       rel="stylesheet"
-      href="https://cdn01.jotfor.ms/stylebuilder/donationBox.css?v=3.3.43677"
+      href="https://cdn01.jotfor.ms/stylebuilder/donationBox.css?v=3.3.43824"
     />
     <style type="text/css" id="form-designer-style">
       /* Injected CSS Code */
@@ -133,35 +154,42 @@
       .form-all {
         font-family: Inter, sans-serif;
       }
+
       .form-label.form-label-auto {
         display: block;
         float: none;
         text-align: left;
         width: 100%;
       }
+
       .form-line {
         margin-top: 12px;
         margin-bottom: 12px;
         padding-top: 0;
         padding-bottom: 0;
       }
+
       .form-all {
         max-width: 752px;
         width: 100%;
       }
+
       .form-label.form-label-left,
       .form-label.form-label-right,
       .form-label.form-label-left.form-label-auto,
       .form-label.form-label-right.form-label-auto {
         width: 230px;
       }
+
       .form-all {
         font-size: 16px;
       }
+
       .supernova .form-all,
       .form-all {
         background-color: #fff;
       }
+
       .form-all {
         color: #2c3345;
       }
@@ -190,12 +218,14 @@
       .form-sub-label {
         color: #464d5f;
       }
+
       .supernova {
         background-color: undefined;
       }
       .supernova body {
         background: transparent;
       }
+
       .form-textbox,
       .form-textarea,
       .form-dropdown,
@@ -205,12 +235,14 @@
       .form-spinner input {
         background-color: undefined;
       }
+
       .supernova {
         background-image: none;
       }
       #stage {
         background-image: none;
       }
+
       .form-all {
         background-image: none;
       }
@@ -219,8 +251,10 @@
       }
       .form-all {
         margin-top: 72px;
-      } /*PREFERENCES STYLE*/ /*__INSPECT_SEPERATOR__*/ /* Injected CSS Code */
+      } /*PREFERENCES STYLE*/ /*__INSPECT_SEPERATOR__*/
+      /* Injected CSS Code */
     </style>
+
     <form
       class="jotform-form"
       action="https://eu-submit.jotform.com/submit/232045653090046"
@@ -235,7 +269,7 @@
         id="JWTContainer"
         value=""
       /><input type="hidden" id="cardinalOrderNumber" value="" />
-      <div role="main" class="form-all">
+      <div role="main" class="form-all form-encrypted">
         <ul class="form-section page-section">
           <li
             class="form-line jf-required"
@@ -333,6 +367,32 @@
                   data-component="email"
                   aria-labelledby="label_2 sublabel_input_2"
                   required=""
+                /><br /><label
+                  class="form-sub-label"
+                  style="
+                    border: 0;
+                    clip: rect(0 0 0 0);
+                    height: 1px;
+                    margin: -1px;
+                    overflow: hidden;
+                    padding: 0;
+                    position: absolute;
+                    width: 1px;
+                    white-space: nowrap;
+                  "
+                  for="input_2_confirm"
+                  >Confirmation Email</label
+                ><input
+                  type="email"
+                  id="input_2_confirm"
+                  name="q2_email"
+                  class="form-textbox validate[required, Email, Email_Confirm]"
+                  data-defaultvalue=""
+                  style="margin-top: 8px; width: 310px"
+                  size="310"
+                  value=""
+                  placeholder="example@example.com"
+                  data-component="emailConfirmation"
                 /><label
                   class="form-sub-label"
                   for="input_2"
@@ -399,7 +459,7 @@
                   type="submit"
                   class="form-submit-button submit-button jf-form-buttons jsTest-submitField"
                   data-component="button"
-                  data-content=""
+                  data-content="This form is encrypted"
                 >
                   Submit
                 </button>

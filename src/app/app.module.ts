@@ -41,6 +41,9 @@ import {
 import { environment } from 'src/environments/environment';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { OrganizationCarouselComponent } from './home/organization-carousel/organization-carousel.component';
+import { OrgFormComponent } from './member-start/org-form/org-form.component';
+import { CorpFormComponent } from './member-start/corp-form/corp-form.component';
+import { IndividualFormComponent } from './member-start/individual-form/individual-form.component';
 
 const isIE =
   window.navigator.userAgent.indexOf('MSIE ') > -1 ||
@@ -110,6 +113,9 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
     SlaveryPolicyComponent,
     OrganizationCarouselComponent,
     HeaderComponent,
+    OrgFormComponent,
+    CorpFormComponent,
+    IndividualFormComponent,
   ],
   imports: [
     BrowserModule,
