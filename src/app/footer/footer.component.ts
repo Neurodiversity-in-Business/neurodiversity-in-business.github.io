@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { DisplayContentService } from '../display-content.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +6,8 @@ import { DisplayContentService } from '../display-content.service';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent {
-  constructor(private displayContentService: DisplayContentService) {}
+  constructor() {}
   sendCloseEventToLanding() {
     window.scrollTo(0, 0);
-    this.displayContentService.hideContent();
   }
 }
