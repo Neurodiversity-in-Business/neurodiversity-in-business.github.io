@@ -4,11 +4,11 @@
   </div>
   <!--JotForms pasted below-->
   <script
-    src="https://cdn02.jotfor.ms/static/prototype.forms.js?3.3.43677"
+    src="https://cdn02.jotfor.ms/static/prototype.forms.js?3.3.43824"
     type="text/javascript"
   ></script>
   <script
-    src="https://cdn03.jotfor.ms/static/jotform.forms.js?3.3.43677"
+    src="https://cdn03.jotfor.ms/static/jotform.forms.js?3.3.43824"
     type="text/javascript"
   ></script>
   <script
@@ -16,11 +16,19 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.js"
   ></script>
   <script
-    src="https://cdn01.jotfor.ms/js/payments/validategateways.js?v=3.3.43677"
+    src="https://cdn01.jotfor.ms/js/payments/validategateways.js?v=3.3.43824"
     type="text/javascript"
   ></script>
   <script
-    src="https://cdn01.jotfor.ms/s/umd/369c903948b/for-form-branding-footer.js?v=3.3.43677"
+    src="https://www.jotform.com/static/encryptedForms.js?3.3.43824"
+    type="text/javascript"
+  ></script>
+  <script
+    src="https://cdn01.jotfor.ms/s/umd/6f593234543/for-form-encryption.js?v=3.3.43824"
+    type="text/javascript"
+  ></script>
+  <script
+    src="https://cdn01.jotfor.ms/s/umd/6f593234543/for-form-branding-footer.js?v=3.3.43824"
     type="text/javascript"
     defer
   ></script>
@@ -32,6 +40,11 @@
     JotForm.newPaymentUI = true;
     JotForm.clearFieldOnHide = "disable";
     JotForm.submitError = "jumpToFirstError";
+    JotForm.encryptionProtocol = "JF-CSE-V2";
+    JotForm.isEncrypted = true;
+    JotForm.encryptionPublicKey =
+      "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwkpvfPSdJhEOd6GL82ZlBZXYW8e22LUs+CvGZlKT3mPQzaQLKvRBUgb9bYhev6xMeOEmdoiT+cUC5xYxoJrpQn901JlRKOjNSOoGxnTUTqqstivHyOYyV2XopX8bHoelNd6F94qasinpT38amSTOjRerry5xKncsySP3n8RO2N3cSKKrlKzbi2pkSHkmFYN9FhpcSnpC+tk9p6fBmR3Kp9e7Tc8ftumwNy8FEWDzjaC3gugc5ZXL34V8pbyYXVYxKgDnZ7ZA7i8St2lT+kLzbMfusru524wWW6Pj3MNRJPDeD/Lpgxv1Ded0XuRp+TjthKll9tulkL9uBid7DtoxvwIDAQAB-----END PUBLIC KEY-----";
+    JotForm.setFieldsToPreserve(["email"]);
     window.addEventListener("DOMContentLoaded", function () {
       window.brandingFooter.init({
         formID: 232046444169355,
@@ -41,10 +54,16 @@
       });
     });
     JotForm.init(function () {
-      /*INIT-START*/ if (window.JotForm && JotForm.accessible)
+      /*INIT-START*/
+      if (window.JotForm && JotForm.accessible)
         $("input_5").setAttribute("tabindex", 0);
-      JotForm.alterTexts(undefined); /*INIT-END*/
+      JotForm.alterTexts(undefined);
+      JotEncrypted.setPublicKey(
+        "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwkpvfPSdJhEOd6GL82ZlBZXYW8e22LUs+CvGZlKT3mPQzaQLKvRBUgb9bYhev6xMeOEmdoiT+cUC5xYxoJrpQn901JlRKOjNSOoGxnTUTqqstivHyOYyV2XopX8bHoelNd6F94qasinpT38amSTOjRerry5xKncsySP3n8RO2N3cSKKrlKzbi2pkSHkmFYN9FhpcSnpC+tk9p6fBmR3Kp9e7Tc8ftumwNy8FEWDzjaC3gugc5ZXL34V8pbyYXVYxKgDnZ7ZA7i8St2lT+kLzbMfusru524wWW6Pj3MNRJPDeD/Lpgxv1Ded0XuRp+TjthKll9tulkL9uBid7DtoxvwIDAQAB-----END PUBLIC KEY-----"
+      );
+      /*INIT-END*/
     });
+
     setTimeout(function () {
       JotForm.paymentExtrasOnTheFly([
         null,
@@ -88,22 +107,22 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.43677&themeRevisionID=5f7ed99c2c2c7240ba580251"
+    href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.43824&themeRevisionID=5f7ed99c2c2c7240ba580251"
   />
   <link
     type="text/css"
     rel="stylesheet"
-    href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.43677"
+    href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.43824"
   />
   <link
     type="text/css"
     rel="stylesheet"
-    href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.43677"
+    href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.43824"
   />
   <link
     type="text/css"
     rel="stylesheet"
-    href="https://cdn01.jotfor.ms/stylebuilder/donationBox.css?v=3.3.43677"
+    href="https://cdn01.jotfor.ms/stylebuilder/donationBox.css?v=3.3.43824"
   />
   <form
     class="jotform-form"
@@ -119,7 +138,7 @@
       id="JWTContainer"
       value=""
     /><input type="hidden" id="cardinalOrderNumber" value="" />
-    <div role="main" class="form-all">
+    <div role="main" class="form-all form-encrypted">
       <ul class="form-section page-section">
         <li
           class="form-line jf-required"
@@ -267,7 +286,7 @@
                 type="submit"
                 class="form-submit-button submit-button jf-form-buttons jsTest-submitField"
                 data-component="button"
-                data-content=""
+                data-content="This form is encrypted"
               >
                 Submit
               </button>
@@ -307,8 +326,8 @@
   <script type="text/javascript">
     JotForm.forwardToEu = true;
   </script>
-  <script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.43677"></script>
-  <script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.43677"></script>
+  <script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.43824"></script>
+  <script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.43824"></script>
   <script type="text/javascript">
     JotForm.isNewSACL = true;
   </script>
