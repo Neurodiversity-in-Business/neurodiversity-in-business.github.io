@@ -30,17 +30,20 @@ export class HomeComponent implements OnInit {
 
     this._carouselService.corpSubject.next(corporateData);
 
-
     const partnerData = new CarouselData();
     partnerData.directory = 'community';
     partnerData.items = [];
-    partnerData.items.push(new CarouselItem('British Dyslexia Association', 'bda.png'));
-    partnerData.items.push(new CarouselItem('Ambitious About Autism', 'aba.png'));
-    partnerData.items.push(new CarouselItem('Diversity and Ability', 'danda.jpeg'));
+    partnerData.items.push(
+      new CarouselItem('British Dyslexia Association', 'bda.png')
+    );
+    partnerData.items.push(
+      new CarouselItem('Ambitious About Autism', 'aba.png')
+    );
+    partnerData.items.push(
+      new CarouselItem('Diversity and Ability', 'danda.jpeg')
+    );
 
     this._carouselService.partSubject.next(partnerData);
     this.carouselIsReady = true;
-
-
   }
 }

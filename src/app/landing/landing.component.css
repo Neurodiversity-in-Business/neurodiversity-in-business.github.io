@@ -16,8 +16,8 @@ body {
   margin: 0;
 }
 
-button:hover,
-button:focus {
+a:hover,
+a:focus {
   background-color: purple;
   color: aliceblue;
   font-weight: bold;

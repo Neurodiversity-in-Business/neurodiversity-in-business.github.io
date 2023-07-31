@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CarouselData } from '../carousel-data';
-import {Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-organization-carousel',
@@ -8,7 +8,8 @@ import {Observable} from 'rxjs';
   styleUrls: ['./organization-carousel.component.css'],
 })
 export class OrganizationCarouselComponent implements OnInit {
-  @Input('carouselDataObservable') carouselDataObervable: Observable<CarouselData>;
+  @Input('carouselDataObservable')
+  carouselDataObervable: Observable<CarouselData>;
   carouselData: CarouselData;
   ngOnInit(): void {
     this.carouselDataObervable.subscribe((data) => {
