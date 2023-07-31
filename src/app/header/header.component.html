@@ -1,0 +1,123 @@
+<span class="accessibility-tools">
+    <a
+      #skipLink
+      id="skipLink"
+      href="#pageHeader"
+      class="skip-to-main-content-link"
+      >Skip to main content</a
+    >
+  </span>
+  
+  <span>
+    <nav class="navbar navbar-light bg-light mb-3 navigation">
+      <div class="container-fluid">
+        <span *ngIf="isMobileLayout" class="col-sm-3">
+          <img
+            style="width: 100px"
+            class="logo"
+            src="../assets/logo.png"
+            alt="Neurodiversity in Buisness Logo"
+          />
+        </span>
+  
+        <div *ngIf="!isMobileLayout" class="col-sm-3">
+          <img
+            class="logo"
+            src="../assets/logo.png"
+            alt="Neurodiversity in Buisness Logo"
+          />
+        </div>
+  
+        <div class="col" style="text-align: right">
+          <div>
+            <button
+              class="login-button btn btn-primary"
+              *ngIf="!loginDisplay"
+              (click)="loginRedirect()"
+            >
+              Login
+            </button>
+  
+            <div *ngIf="loginDisplay" ngbDropdown class="d-inline-block">
+              <button
+                type="button"
+                ngbDropdownToggle
+                class="btn btn-outline-primary"
+                id="dropdownBasic1"
+              >
+                {{ username }}
+              </button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem (click)="logout()">Logout</button>
+              </div>
+            </div>
+          </div>
+          <br /><br />
+          <div [(ngbCollapse)]="isMenuCollapsed" class="collapse navbar-collapse">
+            <ul
+              [keyboard]="true"
+              ngbNav
+              [(ngbCollapse)]="isMenuCollapsed"
+              #nav="ngbNav"
+              [(activeId)]="navActiveId"
+              class="nav"
+            >
+              <li [ngbNavItem]="1">
+                <a #homeButton [routerLink]="'home'" id="homeButton" ngbNavLink
+                  >Home</a
+                >
+              </li>
+              <li [ngbNavItem]="2">
+                <a [routerLink]="'about'" id="aboutButton" ngbNavLink>About Us</a>
+              </li>
+              <li [ngbNavItem]="3">
+                <a [routerLink]="'member-start'" id="memberButton" ngbNavLink
+                  >Become A Member</a
+                >
+              </li>
+              <li [ngbNavItem]="4">
+                <a [routerLink]="'research'" id="researchButton" ngbNavLink
+                  >Research</a
+                >
+              </li>
+              <li [ngbNavItem]="5">
+                <a
+                  [routerLink]="'volunteer-start'"
+                  id="volunteerButton"
+                  ngbNavLink
+                  >Volunteer With Us</a
+                >
+              </li>
+              <li [ngbNavItem]="6">
+                <a
+                  [routerLink]="'hub'"
+                  onClick="location.href='https://neurodiversityinbusiness.org/ndresourcehub/'"
+                  id="hubButton"
+                  ngbNavLink
+                >
+                  ND Resource Hub
+                </a>
+              </li>
+              <li [ngbNavItem]="7">
+                <a [routerLink]="'contact-us'" id="contactButton" ngbNavLink
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="md-auto">
+            <button
+              class="navbar-toggler"
+              type="button"
+              (click)="isMenuCollapsed = !isMenuCollapsed"
+            >
+              &#9776;
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </span>
+  <router-outlet></router-outlet>
+  <app-footer> </app-footer>
+  

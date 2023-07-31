@@ -22,11 +22,11 @@ import { Location } from '@angular/common';
 import { Subject } from 'rxjs/internal/Subject';
 import { filter, takeUntil } from 'rxjs/operators';
 @Component({
-  selector: 'app-landing',
-  templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.css'],
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css'],
 })
-export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
+export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
   navActiveId = 1;
   isMenuCollapsed = window.innerWidth <= 991;
   loginDisplay = false;
