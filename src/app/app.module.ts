@@ -109,7 +109,6 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
     CookiePolicyComponent,
     SlaveryPolicyComponent,
     OrganizationCarouselComponent,
-
     HeaderComponent,
   ],
   imports: [
