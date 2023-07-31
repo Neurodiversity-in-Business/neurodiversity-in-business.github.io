@@ -12,6 +12,7 @@ import { MemberStartComponent } from './member-start/member-start.component';
 import { VolunteerStartComponent } from './volunteer-start/volunteer-start.component';
 import { HubComponent } from './hub/hub.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ResearchComponent } from './research/research.component';
 
 const routes: Routes = [
   { path: 'privacy', component: PrivacyPolicyComponent },
@@ -20,7 +21,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'member-start', component: MemberStartComponent },
-  { path: 'research', component: HomeComponent },
+  { path: 'research', component: ResearchComponent },
   { path: 'volunteer-start', component: VolunteerStartComponent },
   { path: 'hub', component: HubComponent },
   { path: 'contact-us', component: ContactUsComponent },
