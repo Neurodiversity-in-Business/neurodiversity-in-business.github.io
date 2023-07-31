@@ -12,9 +12,8 @@ import { VolunteerStartComponent } from './volunteer-start/volunteer-start.compo
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
-import { LandingComponent } from './landing/landing.component';
+import { HeaderComponent } from './header/header.component';
 import { HubComponent } from './hub/hub.component';
-
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 import { SlaveryPolicyComponent } from './slavery-policy/slavery-policy.component';
@@ -110,7 +109,7 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
     CookiePolicyComponent,
     SlaveryPolicyComponent,
     OrganizationCarouselComponent,
-    LandingComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
