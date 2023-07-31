@@ -12,7 +12,7 @@ import { VolunteerStartComponent } from './volunteer-start/volunteer-start.compo
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
-
+import { LandingComponent } from './landing/landing.component';
 import { HubComponent } from './hub/hub.component';
 
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
@@ -47,8 +47,7 @@ const isIE =
   window.navigator.userAgent.indexOf('MSIE ') > -1 ||
   window.navigator.userAgent.indexOf('Trident/') > -1; // Remove this line to use Angular Universal
 
-export function loggerCallback(logLevel: LogLevel, message: string) {
-}
+export function loggerCallback(logLevel: LogLevel, message: string) {}
 
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
@@ -111,6 +110,7 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
     CookiePolicyComponent,
     SlaveryPolicyComponent,
     OrganizationCarouselComponent,
+    LandingComponent,
   ],
   imports: [
     BrowserModule,
@@ -144,6 +144,6 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
     MsalGuard,
     MsalBroadcastService,
   ],
-  bootstrap: [AppComponent, MsalRedirectComponent, HomeComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

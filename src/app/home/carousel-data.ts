@@ -1,7 +1,7 @@
-import { CarouselItem } from "./carousel-item";
+import { CarouselItem } from './carousel-item';
 
 export class CarouselData {
-    title:string;
-    directory:string;
-    items:Array<CarouselItem>;
+  title: string;
+  directory: string;
+  items: Array<CarouselItem>;
 }
