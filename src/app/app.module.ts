@@ -29,7 +29,6 @@ import {
   MsalGuard,
   MsalInterceptor,
   MsalService,
-  MsalRedirectComponent,
 } from '@azure/msal-angular';
 import {
   LogLevel,
