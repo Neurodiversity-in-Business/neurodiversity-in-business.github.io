@@ -1,1 +1,20 @@
-<p>Coming Soon!</p>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let item of resourcesList" class="col">
+      <span class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ item.title }}
+          </h5>
+          <div class="card-text">
+           <p> Source: {{ item.source }} </p><br />
+           <p *ngIf="item.pubYear"> Year: {{ item.pubYear }} </p> <br />
+            {{ item.miNotesFilters }} <br />
+            <a target="_blank" href="{{ item.url }}">Read More > </a>
+          </div>
+        </div>
+      </span>
+      <br />
+    </div>
+  </div>
+</div>
