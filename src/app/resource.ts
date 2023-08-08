@@ -1,7 +1,6 @@
 export class Resource {
     source: string;
     title: string;
-    column5: string | number;
     url: string;
     pubYear: string | number;
     audience: string;
