@@ -228,7 +228,7 @@ export class FirebaseService {
     },
     {
       source: 'Telegraph',
-      title: 'What�s it really like to be autistic in the workplace?',
+      title: 'What\'s it really like to be autistic in the workplace?',
       url: 'https://www.telegraph.co.uk/business/autism-in-workplace/working-with-autism/',
       pubYear: 2019,
       audience: 'Everyone',
@@ -507,7 +507,7 @@ export class FirebaseService {
     },
     {
       source: 'Harvard Business Review',
-      title: 'Autism Doesn�t Hold People Back at Work. Discrimination Does.',
+      title: 'Autism Doesn\'t Hold People Back at Work. Discrimination Does.',
       url: 'https://hbr.org/2021/12/autism-doesnt-hold-people-back-at-work-discrimination-does',
       pubYear: 2021,
       audience: 'Everyone',
@@ -1000,7 +1000,7 @@ export class FirebaseService {
     },
     {
       source: 'National Autistic Society',
-      title: 'Employing autistic people � a guide for employers',
+      title: 'Employing autistic people \' a guide for employers',
       url: 'https://www.autism.org.uk/advice-and-guidance/topics/employment/employing-autistic-people/employers',
       pubYear: '',
       audience: 'Employees',
@@ -1579,7 +1579,7 @@ export class FirebaseService {
     {
       source: 'Diverse Sussex',
       title:
-        'Aligning our common goal of ensuring everyone has equal access to opportunities in Sussex�s technology sector.',
+        'Aligning our common goal of ensuring everyone has equal access to opportunities in Sussex\'s technology sector.',
       url: 'https://diversesussex.com/',
       pubYear: '',
       audience: 'Jobseeker',
@@ -1646,7 +1646,7 @@ export class FirebaseService {
     {
       source: 'Sage Journals',
       title:
-        'Autistic adults� experiences of diagnostic disclosure in the workplace',
+        'Autistic adults\' experiences of diagnostic disclosure in the workplace',
       url: 'https://journals.sagepub.com/doi/full/10.1177/23969415211022955',
       pubYear: 2021,
       audience: 'Everyone',
@@ -1875,7 +1875,7 @@ export class FirebaseService {
     },
     {
       source: 'National Autistic Society',
-      title: 'Employing autistic people � a guide for employers',
+      title: 'Employing autistic people \' a guide for employers',
       url: 'https://www.autism.org.uk/advice-and-guidance/topics/employment/employing-autistic-people/employers',
       pubYear: '',
       audience: 'Employers',
@@ -1925,7 +1925,7 @@ export class FirebaseService {
     {
       source: 'The Law Society',
       title:
-        'Reasonable adjustments in organisations � best practice for disability inclusion',
+        'Reasonable adjustments in organisations \' best practice for disability inclusion',
       url: 'https://www.lawsociety.org.uk/topics/lawyers-with-disabilities/reasonable-adjustments-in-organisations-best-practice-for-disability-inclusion',
       pubYear: 2021,
       audience: 'Employers',
@@ -2057,7 +2057,7 @@ export class FirebaseService {
     },
     {
       source: 'Dublin City University in partnership with Indeed',
-      title: 'Hiring Managers� Toolkit for Neurodiversity',
+      title: 'Hiring Managers\' Toolkit for Neurodiversity',
       url: 'https://static1.squarespace.com/static/5a88ab00f43b552a84c3b7c9/t/5f4081b20502cb348f88df0a/1598063085626/managers_toolkit_.pdf',
       pubYear: 2020,
       audience: 'Employees',
@@ -2407,7 +2407,7 @@ export class FirebaseService {
     {
       source: 'Autistica',
       title:
-        'Autistica Support Plan � How to build a proven support system for autistic people by 2030',
+        'Autistica Support Plan How to build a proven support system for autistic people by 2030',
       url: 'https://neurodiversityinbusiness.org/wp-content/uploads/2022/11/Autistica-Support-Plan.pdf',
       pubYear: 2021,
       audience: 'Everyone',
@@ -2440,7 +2440,7 @@ export class FirebaseService {
     {
       source: 'Cognassist',
       title:
-        'Employers� Responsibilities: Reasonable Adjustments, Equality Act & Discrimination',
+        'Employers\' Responsibilities: Reasonable Adjustments, Equality Act & Discrimination',
       url: 'https://cognassist.com/insights/reasonable-adjustments-equality-act/',
       pubYear: 2023,
       audience: 'Employers',
@@ -2489,7 +2489,7 @@ export class FirebaseService {
     {
       source: 'Cognassist',
       title:
-        'Great minds don�t think alike: Tips for a neuro-inclusive workplace',
+        'Great minds don\'t think alike: Tips for a neuro-inclusive workplace',
       url: 'https://cognassist.com/insights/tips-for-a-neuro-inclusive-workplace/',
       pubYear: 2023,
       audience: 'Everyone',
