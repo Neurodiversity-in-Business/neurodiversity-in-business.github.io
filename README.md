@@ -1,6 +1,6 @@
 # Neurodiversity In Business Website
 
-[![Node.js CI](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/node.js.yml/badge.svg)](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/node.js.yml)  [![Deploy static content to Pages](https://github.com/Neurodiversity-in-Business/neurodiversity-in-business.github.io/actions/workflows/static.yml/badge.svg?branch=production)](https://github.com/Neurodiversity-in-Business/neurodiversity-in-business.github.io/actions/workflows/static.yml)
+[![Node.js CI](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/node.js.yml/badge.svg)](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/node.js.yml)  [![Deploy static content to Pages](https://github.com/Neurodiversity-in-Business/neurodiversity-in-business.github.io/actions/workflows/static.yml/badge.svg)](https://github.com/Neurodiversity-in-Business/neurodiversity-in-business.github.io/actions/workflows/static.yml)
 
 ## Welcome
 
