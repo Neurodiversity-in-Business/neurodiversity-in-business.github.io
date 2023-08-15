@@ -47,20 +47,16 @@ jobs:
 
   create-release:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.x]
-
-    name: Create Release
-    needs: build
     steps:
       - name: Archive Release
-      - uses: thedoctor0/zip-release@0.7.1
+        uses: thedoctor0/zip-release@0.7.1
         with:
           type: "zip"
           filename: "release.zip"
-          exclusions: "*.git* .vscode* .editorconfig node_modules dist coverage"
-      - uses: ncipollo/release-action@v1
+          exclusions: "*.git* .vscode* .editorconfig"
+      - name: Create Release
+        id: create_release
+        uses: ncipollo/release-action@v1
         with:
           tag: "nightly-tag-${{ steps.date.outputs.date }}"
           artifacts: "release.zip"
