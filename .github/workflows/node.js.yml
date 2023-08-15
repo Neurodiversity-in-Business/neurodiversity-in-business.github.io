@@ -27,6 +27,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Static-Site
+          path: public/neurodiversity-main/
       - run: npm run-script coverage
       - uses: actions/upload-artifact@v3
         with:
