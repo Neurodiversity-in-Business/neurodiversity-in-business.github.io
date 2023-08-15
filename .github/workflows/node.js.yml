@@ -49,11 +49,6 @@ jobs:
         with:
           name: Static-Site-Assets
           path: public/neurodiversity-main/
-
-  create-release:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - uses: actions/download-artifact@master
         with:
           name: Static-Site-Assets
