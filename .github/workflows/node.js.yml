@@ -43,12 +43,6 @@ jobs:
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M-%S')"
-      - uses: actions/checkout@v3
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: Static-Site-Assets
-          path: public/neurodiversity-main/
       - name: Create Release
         id: create_release
         uses: ncipollo/release-action@v1
