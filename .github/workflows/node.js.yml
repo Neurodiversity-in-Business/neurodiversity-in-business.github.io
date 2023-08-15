@@ -39,24 +39,22 @@ jobs:
         node-version: [20.x]
     name: Archive
     needs: test
-     steps:
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
+    steps:
+      - uses: actions/upload-artifact@v3
         with:
           name: nib-static-site
           path: |
-             public/neurodiversity-main/
+            public/neurodiversity-main/
   create-release:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [20.x]
-     name: Create Release
-     needs: test
-     steps:
-        - id: create_release
-        - uses: ncipollo/release-action@v1
-          with:
-            tag: "nightly-tag-${{ steps.date.outputs.date }}"
-            artifacts: "release.zip"
-            prerelease: true
+    name: Create Release
+    needs: test
+    steps:
+      - uses: ncipollo/release-action@v1
+        with:
+          tag: "nightly-tag-${{ steps.date.outputs.date }}"
+          artifacts: "release.zip"
+          prerelease: true
