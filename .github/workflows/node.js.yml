@@ -44,17 +44,17 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M-%S')"
       - uses: actions/checkout@v3
-
-  create-release:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Archive Release
         uses: thedoctor0/zip-release@0.7.1
         with:
           type: "zip"
           filename: "release.zip"
           exclusions: "*.git* .vscode* .editorconfig"
+
+  create-release:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Create Release
         id: create_release
         uses: ncipollo/release-action@v1
