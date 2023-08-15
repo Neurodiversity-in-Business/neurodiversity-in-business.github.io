@@ -48,10 +48,4 @@ jobs:
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M-%S')"
-      - name: Create Release
-        id: create_release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: "nightly-tag-${{ steps.date.outputs.date }}"
-          artifacts: "release.zip"
-          prerelease: true
+
