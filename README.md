@@ -1,7 +1,4 @@
-# Neurodiversity In Business Website [![Twitter][1.1]][1]
-
-[1.1]: http://i.imgur.com/tXSoThF.png "twitter icon with padding"
-[1]: https://twitter.com/NDinBusiness
+# Neurodiversity In Business Website
 
 [![Node.js CI](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/node.js.yml/badge.svg)](https://github.com/Neurodiversity-in-Business/neurodiversity-main/actions/workflows/node.js.yml)  [![Deploy static content to Pages](https://github.com/Neurodiversity-in-Business/neurodiversity-in-business.github.io/actions/workflows/static.yml/badge.svg?branch=production)](https://github.com/Neurodiversity-in-Business/neurodiversity-in-business.github.io/actions/workflows/static.yml)
 
