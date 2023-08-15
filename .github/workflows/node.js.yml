@@ -50,11 +50,18 @@ jobs:
     strategy:
       matrix:
         node-version: [20.x]
+
     name: Create Release
     needs: build
     steps:
+      - name: Archive Release
+      - uses: thedoctor0/zip-release@0.7.1
+        with:
+          type: "zip"
+          filename: "release.zip"
+          exclusions: "*.git* .vscode* .editorconfig node_modules dist coverage"
       - uses: ncipollo/release-action@v1
         with:
           tag: "nightly-tag-${{ steps.date.outputs.date }}"
-          artifacts: public
+          artifacts: "release.zip"
           prerelease: true
