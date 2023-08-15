@@ -49,10 +49,6 @@ jobs:
         with:
           name: Static-Site-Assets
           path: public/neurodiversity-main/
-      - uses: actions/download-artifact@master
-        with:
-          name: Static-Site-Assets
-          path: .
       - name: Create Release
         id: create_release
         uses: ncipollo/release-action@v1
