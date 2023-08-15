@@ -6,8 +6,6 @@ name: Run Build and Unit Tests
 on:
   push:
     branches: ["development"]
-  pull_request:
-    branches: ["development"]
 
 jobs:
   build:
@@ -26,18 +24,21 @@ jobs:
       - run: npm run build
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.x]
     name: Test
     needs: build
     steps:
       - uses: actions/setup-node@v3
       - run: npm test
   archive:
-     runs-on: ubuntu-latest
-     name: Archive
-     needs: test
-     strategy:
+    runs-on: ubuntu-latest
+    strategy:
       matrix:
         node-version: [20.x]
+    name: Archive
+    needs: test
      steps:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
@@ -46,7 +47,10 @@ jobs:
           path: |
              public/neurodiversity-main/
   create-release:
-     runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.x]
      name: Create Release
      needs: test
      steps:
