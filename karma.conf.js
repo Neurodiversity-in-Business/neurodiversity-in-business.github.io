@@ -27,7 +27,7 @@ module.exports = function (config) {
     coverageReporter: {
       dir: require("path").join(__dirname, "./coverage/neurodiversity-main"),
       subdir: ".",
-      reporters: [{ type: "xml" }, { type: "cobertura" }],
+      reporters: [{ type: "html" }, { type: "cobertura" }],
     },
     reporters: ["progress", "kjhtml"],
     port: 9876,
